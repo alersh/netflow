@@ -1,0 +1,40 @@
+Package: ModelPath
+Type: Package
+Title: Visualize, Explore, and Model Your Data Processing Pipeline Interactively
+Version: 0.1.0
+Authors@R: person(given = "Albert",
+             family = "Ler",
+             role = c("aut", "cre"),
+             email = "alersh@gmail.com")
+Description: An interactive graphical tool for building and running data processing and modelling pipelines. 
+License: GPL-3
+URL: https://github.com/modelFlow
+BugReports: https://github.com/modelFlow/issues
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.2.0)
+Imports:
+    visNetwork (>= 2.0.6),
+    shiny (>= 1.2.0),
+    htmltools (>= 0.4.0),
+    tidyverse (>= 0.6.1),
+    ggplot2 (>= 2.2.1),
+    plotly (>= 4.7.1),
+    purrr (>= 0.2.3),
+    shinyBS (>= 0.61),
+    shinyjs (>= 1.0),
+    shinyWidgets (>= 0.6.0),
+    miniUI (>= 0.1.1.1),
+    shinyFiles (>= 0.7.2),
+    knitr (>= 1.22),
+    lazyeval (>= 0.2.2),
+    shinyWidgets (>= 0.5.0),
+    R6 (>= 2.4.1),
+    utils (>= 3.5.0)
+Suggests:
+    testthat,
+    tools,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 7.1.1
