@@ -2,7 +2,7 @@
 % Please edit documentation in R/Edge.R
 \name{Edge}
 \alias{Edge}
-\title{R6 Class representing a node}
+\title{R6 Class representing an edge}
 \description{
 Creates an Edge object
 }
@@ -34,25 +34,25 @@ Specifies the connections between nodes
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Edge$new()}}
-\item \href{#method-create_representation}{\code{Edge$create_representation()}}
-\item \href{#method-is_connected}{\code{Edge$is_connected()}}
-\item \href{#method-render}{\code{Edge$render()}}
-\item \href{#method-set_connect}{\code{Edge$set_connect()}}
-\item \href{#method-clone}{\code{Edge$clone()}}
+\item \href{#method-Edge-new}{\code{Edge$new()}}
+\item \href{#method-Edge-create_representation}{\code{Edge$create_representation()}}
+\item \href{#method-Edge-is_connected}{\code{Edge$is_connected()}}
+\item \href{#method-Edge-render}{\code{Edge$render()}}
+\item \href{#method-Edge-set_connect}{\code{Edge$set_connect()}}
+\item \href{#method-Edge-clone}{\code{Edge$clone()}}
 }
 }
-\if{html}{
-\out{<details open ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize">}\href{../../ModelPath/html/Serializable.html#method-serialize}{\code{ModelPath::Serializable$serialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize">}\href{../../ModelPath/html/Serializable.html#method-unserialize}{\code{ModelPath::Serializable$unserialize()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-serialize'><code>ModelPath::Serializable$serialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-unserialize'><code>ModelPath::Serializable$unserialize()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Edge-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Edge-new}{}}}
 \subsection{Method \code{new()}}{
 Create an Edge object
 \subsection{Usage}{
@@ -81,8 +81,8 @@ create_representation
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-create_representation"></a>}}
-\if{latex}{\out{\hypertarget{method-create_representation}{}}}
+\if{html}{\out{<a id="method-Edge-create_representation"></a>}}
+\if{latex}{\out{\hypertarget{method-Edge-create_representation}{}}}
 \subsection{Method \code{create_representation()}}{
 Create an edge representation
 \subsection{Usage}{
@@ -101,8 +101,8 @@ is_connected}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-is_connected"></a>}}
-\if{latex}{\out{\hypertarget{method-is_connected}{}}}
+\if{html}{\out{<a id="method-Edge-is_connected"></a>}}
+\if{latex}{\out{\hypertarget{method-Edge-is_connected}{}}}
 \subsection{Method \code{is_connected()}}{
 Check if the edge is connected
 \subsection{Usage}{
@@ -115,8 +115,8 @@ render
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-render"></a>}}
-\if{latex}{\out{\hypertarget{method-render}{}}}
+\if{html}{\out{<a id="method-Edge-render"></a>}}
+\if{latex}{\out{\hypertarget{method-Edge-render}{}}}
 \subsection{Method \code{render()}}{
 Create a visnetwork data frame for rendering the edges
 set_connect
@@ -126,8 +126,8 @@ set_connect
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_connect"></a>}}
-\if{latex}{\out{\hypertarget{method-set_connect}{}}}
+\if{html}{\out{<a id="method-Edge-set_connect"></a>}}
+\if{latex}{\out{\hypertarget{method-Edge-set_connect}{}}}
 \subsection{Method \code{set_connect()}}{
 Set the edge connection
 \subsection{Usage}{
@@ -143,8 +143,8 @@ Set the edge connection
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Edge-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Edge-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
