@@ -26,6 +26,13 @@ Network <- R6::R6Class("Network",
                            }
                          },
 
+                         #' @description Get the network namespaced node id
+                         #' @param node_id The id of the node
+                         #' @return The namespaced id
+                         ns = function(node_id){
+                           return (private$.set_network_node_id(node_id))
+                         },
+
                          #' @description Reset the network by clearing all the outputs of all the
                          #' unlocked nodes. Locked nodes are not reset.
                          #' @return network
@@ -215,6 +222,50 @@ Network <- R6::R6Class("Network",
                            }
                            invisible(self)
                          },
+
+                         #' Build a branch of the network using the parsed expression.
+                         #' @description Build a branck of the network using the parsed expression.
+                         #' @param parsed_expr The parsed expression
+                         #' @export
+                         build_branch = function(parsed_expr){
+
+                           # add nodes
+                           for (i in seq(parsed_expr)){
+                             if (!self$nodes$contains_key(self$ns(names(parsed_expr)[i]))){
+                               f <- Function$new(fn = parsed_expr[[i]]$fn, ns = parsed_expr[[i]]$namespace, input_args = parsed_expr[[i]]$socket)
+                               for (j in seq(parsed_expr[[i]]$options)){
+                                 key <- names(parsed_expr[[i]]$options)[j]
+                                 f$set_option(key, parsed_expr[[i]]$options[[key]])
+                               }
+                               self$add_node(Process_Node$new(names(parsed_expr)[i], fn = f))
+                             } else{
+                               # this node is already included in the network. Check if this input argument is also in there. If it is
+                               # different, then likely we have another input argument to be included. So add this new input argument to the node.
+                               # Otherwise, we exclude this node.
+                               node <- self$nodes$get(self$ns(names(parsed_expr)[i]))
+                               if (!is.null(node$fn$args)){
+                                 if (!parsed_expr[[i]]$socket %in% node$fn$args)
+                                   node$fn$add_arg(parsed_expr[[i]]$socket)
+                               }
+                               else
+                                 warning(paste("The node id", names(parsed_expr)[i], "has already been added to the network. If you intend
+                to use this same id because you are creating another branch from this node, then you
+                do not need to do anything. Otherwise, please change id to a different name."))
+                             }
+                           }
+
+                           # add edges
+                           if (length(parsed_expr) > 1){
+                             for (i in 1:(length(parsed_expr) - 1)){
+                               e <- Edge$representation(from_node_id = names(parsed_expr)[i],
+                                                        to_node_id = names(parsed_expr)[i+1])
+                               self$add_edge(e, socket = parsed_expr[[i+1]]$socket)
+
+                             }
+                           }
+                           invisible(self)
+                         },
+
                          #' @description Run the network by executing all the node operations sequentially
                          #' @param node_id Character. If the node_id is missing, then all the nodes will be run. Otherwise,
                          #' only the node of the node_id will be run.
@@ -347,7 +398,7 @@ Network <- R6::R6Class("Network",
                          # @field .counter_id. Counter used to create new id for a new node
                          .counter_id = 1,
 
-                         # @description .set_network_node_id Attach the netowork id to the node id
+                         # @description .set_network_node_id Attach the network id to the node id
                          # @param node_id Character
                          # @return Character
                          .set_network_node_id = function(node_id){
