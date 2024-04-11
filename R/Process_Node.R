@@ -68,7 +68,17 @@ Process_Node <- R6::R6Class("Process_Node",
                                   private$.warningmsg <- self$output$message
                                 }
                                 else{
-                                  self$set_status('success')
+                                  # save output
+                                  status <- tryCatch(
+                                    saveOutput(self$output, self$id),
+                                    error = function(e) e
+                                  )
+                                  if (inherits(status, "error")){
+                                    self$set_status_fail()
+                                    private$.errormsg <- status$message
+                                  } else{
+                                    self$set_status('success')
+                                  }
                                 }
                                 return (self$status)
                               },
