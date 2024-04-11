@@ -1,4 +1,4 @@
-#' R6 Class representing a node
+#' R6 Class representing an edge
 #'
 #' @description
 #' Creates an Edge object
@@ -177,8 +177,8 @@ Edge <- R6::R6Class("Edge",
 is_Edge <- function(obj){
   return (inherits(obj, "Edge"))
 }
-#' get_nodes_with_edge
-#'
+
+
 Edge$get_nodes_from_representation <- function(representation){
   representation <- gsub(" ", "", representation)
   nodes <- strsplit(representation, split = "->")[[1]]
