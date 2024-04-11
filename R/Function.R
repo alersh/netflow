@@ -2,7 +2,7 @@
 #' @description
 #' A Function class
 #' @details
-#' The Funtion object stores the function, the arguments, the parameter, and the methods
+#' The Function object stores the function, the arguments, the parameter, and the methods
 #' used to process the function.
 #' @export
 Function <- R6::R6Class("Function",
@@ -241,7 +241,7 @@ Function <- R6::R6Class("Function",
                             # @description Define data types of the arguments
                             # @param data_types A list of arguments with their defined data types
                             .init_data_types = function(data_types){
-                              np <- c(names(private$.args), names(private$.options))
+                              np <- c(private$.args, names(private$.options))
                               n <- names(data_types)
                               for (i in seq_along(np)){
                                 if (np[i] %in% n)
@@ -300,4 +300,200 @@ arguments <- function(fn, exclude = NULL){
     }
 
     return (arguments)
+}
+
+#' Parse a function call
+#' @description Parse a function call.
+#' @param s A string of function call.
+#' @return A list that contains the namespace of the function, the function name,
+#' the socket which the input is plugged into, and all the options that have been
+#' specified in this function call.
+#' @export
+parse_function <- function(s){
+  l = list(namespace = NULL, fn = NULL, socket = NULL, options = NULL)
+  ns_fn = strsplit(s, split = "::")[[1]]
+  fn_part <- NULL
+  if (length(ns_fn) == 2) {
+    l$namespace = ns_fn[1]
+    fn_part = ns_fn[2]
+  } else{
+    fn_part <- ns_fn[1]
+  }
+
+  # extract the function and the argument parts. Since the argument inputs can contain (),
+  # we cannot use strsplit to do this
+  idx_first <- unlist(gregexpr("[(]", fn_part))[1] # if there are multiple (), then we choose the first (
+  idx_last <- tail(unlist(gregexpr("[)]", fn_part)), 1)
+  fn_s <- substring(fn_part, 1, idx_first - 1)
+  # if () are next to each other, then the option part is ""
+  fn_o <- ""
+  if (idx_first != idx_last - 1) fn_o <- substring(fn_part, idx_first + 1, idx_last - 1)
+  fn_options <- c(fn_s, fn_o)
+  l$fn <- fn_options[1]
+
+  # get the built-in arguments of the function
+  if (!is.null(l$namespace))
+    fn_args <- arguments(eval(parse(text = paste0(l$namespace, "::", l$fn))))
+  else
+    fn_args <- arguments(eval(parse(text = l$fn)))
+
+  arg_list <- list()
+
+  if (fn_options[2] != ""){
+    out <- extract_input_item(fn_options[2], fn_args, arg_list)
+    l$socket <- out$socket
+    l$options <- out$arg_list
+  }else{
+    # Needs to deal with one argument, which could also be ...
+    if (length(fn_args) == 1)
+      l$socket <- names(fn_args)[1]
+  }
+
+  return (l)
+}
+
+#' Extract the items from the function call.
+#' @description A helper function for the parse_function. Extract individual items
+#' from the function call. The argument names
+#' should be specified for their inputs, although even without the argument names this
+#' function can determine which argument name an input item belongs by relying on the
+#' order and location the input occurs. The first argument is considered the socket unless
+#' a dot is used in another argument. That argument becomes the socket. A name in an input
+#' that is followed by = can either be the argument name or part of the input. If the name is
+#' not in the function call, then it is assumed to be part of the elipses ....
+#' @param code_string The string that contains the function call
+#' @param fn_args The arguments that are available for this function
+#' @param arg_list The argument list that the extracted items are to be stored.
+#' @return The arg_list
+#' @export
+extract_input_item <- function(code_string, fn_args, arg_list){
+  s_length <- nchar(code_string)
+  open_bracket <- 0
+  item_count <- 1
+  arg_name_key <- NULL
+  value_start_idx <- NULL
+  start_idx <- 1
+  ellipses_list <- c()
+  socket <- NULL
+  found_dot <- FALSE
+
+  for (idx in seq(s_length)){
+    s <- substring(code_string, idx, idx)
+    if (idx == s_length){
+      # we've come to the end
+      if (!is.null(arg_name_key)){
+        # the name_key has a name, that means this input value is associated with a function argument
+        val <- substring(code_string, value_start_idx, idx)
+
+        # if the value is ., then this argument is the socket
+        if (trimws(val) == "."){
+          socket <- arg_name_key
+          found_dot <- TRUE
+        }
+        else{
+          arg_list[[arg_name_key]] <- val
+        }
+        arg_name_key <- NULL
+
+      } else{
+        # check if it is a dot
+        # check which input argument it is in, and use fn_args to determine what argument this is.
+        val <- substring(code_string, start_idx, idx)
+        if (trimws(val) == ".")
+          socket <- names(fn_args)[item_count]
+        else
+          # either the argument name is not a function argument, or there is no name argument.
+          # We assume this belongs to ...
+          ellipses_list <- append(ellipses_list, substring(code_string, start_idx, idx))
+      }
+
+    } else{
+      if (s == "("){
+        # continue until ")" is found; ignore "," in between
+        open_bracket <- open_bracket + 1
+      } else if (s == ")"){
+        open_bracket <- open_bracket -1
+      } else if (s == "="){
+        if (open_bracket == 0){
+          # then this must be the name argument. Check if it is in the function arguments
+          # if it is, store it. Otherwise, it belongs to ...
+          arg_name_key <- trimws(substring(code_string, start_idx, idx - 1))
+          if (!arg_name_key %in% names(fn_args)){
+            arg_name_key <- NULL
+          }else{
+            # the value must come after =. So we set the value_idx to idx + 1
+            value_start_idx <- idx + 1
+          }
+        }
+      } else if (s == ","){
+        if (open_bracket == 0){
+          # likely this comma separate input arguments
+          if (!is.null(arg_name_key)){
+            # the name_key has a name, that means this input value is associated with a function argument
+            val <- substring(code_string, value_start_idx, idx - 1)
+
+            # if the value is ., then this argument is the socket
+            if (trimws(val) == "."){
+              socket <- arg_name_key
+              found_dot <- TRUE
+            }
+            else{
+              arg_list[[arg_name_key]] <- val
+            }
+            arg_name_key <- NULL
+
+          } else{
+            # check if it is a dot
+            # check which input argument it is in, and use fn_args to determine what argument this is.
+            val <- substring(code_string, start_idx, idx - 1)
+            if (trimws(val) == ".")
+              socket <- names(fn_args)[item_count]
+            else
+              # either the argument name is not a function argument, or there is no name argument.
+              # We assume this belongs to ...
+              ellipses_list <- append(ellipses_list, val)
+          }
+          start_idx <- idx + 1
+          value_start_idx <- NULL
+          item_count <- item_count + 1
+        }
+      }
+    }
+  }
+  if (!found_dot){
+    # the first function argument must be the socket
+    socket <- names(fn_args)[1]
+  }
+
+  if (length(ellipses_list) > 0)
+    arg_list[["..."]] <- paste(ellipses_list, collapse = ",")
+  return (list(arg_list = arg_list, socket = socket))
+}
+
+#' Parse a quoted expression
+#' @description This function parsed an expression into individual function calls. Each
+#' function call is further parsed to obtain the namespace of the function, the function,
+#' the arguments and their inputs. Individual function calls must be connected by the pipe such as
+#' the default %>%. The whole expression must be quoted i.e. quote(expr). The step_ids
+#' must be specified for each function call and these ids will become their node ids.
+#' @param quoted_expr A quoted expression
+#' @param step_ids A vector of node ids corresponding to the function calls.
+#' @param pipe The pipe that separates individual function calls. Default is %>%.
+#' @return A list of parsed function items.
+#' @export
+parse_expr <- function(quoted_expr, step_ids, pipe = "%>%"){
+
+  expr <- as.character(substitute(quoted_expr))
+  expr <- paste(expr[-1], collapse = expr[1])
+
+  steps <- list()
+  i = 1
+
+  b <- strsplit(gsub(" ", "", expr), split = pipe)[[1]]
+  for (s in b){
+    steps[[step_ids[i]]] <- parse_function(s)
+    i = i+ 1
+  }
+
+  return (steps)
 }
