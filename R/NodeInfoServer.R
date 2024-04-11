@@ -322,7 +322,7 @@ nodeVisualizationServer <- function(input, output, session, node, editable = TRU
                     'Line' = ggplot2::geom_line(ggplot2::aes_(rlang::sym(input$PlotX),
                                                               rlang::sym(input$PlotY),
                                             color = rlang::sym(input$PlotGroupBy), fill = rlang::sym(input$PlotGroupBy))),
-                    'Bar' = ggplot2::geom_bar(gglot2::aes_(rlang::sym(input$PlotX),
+                    'Bar' = ggplot2::geom_bar(ggplot2::aes_(rlang::sym(input$PlotX),
                                                            rlang::sym(input$PlotY),
                                           color = rlang::sym(input$PlotGroupBy), fill = rlang::sym(input$PlotGroupBy)),
                                      stat = "identity")
