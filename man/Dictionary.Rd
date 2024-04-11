@@ -34,29 +34,29 @@ this list into the dictionary.}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Dictionary$new()}}
-\item \href{#method-get}{\code{Dictionary$get()}}
-\item \href{#method-remove}{\code{Dictionary$remove()}}
-\item \href{#method-add_value_with_key}{\code{Dictionary$add_value_with_key()}}
-\item \href{#method-set_value_with_key}{\code{Dictionary$set_value_with_key()}}
-\item \href{#method-clear}{\code{Dictionary$clear()}}
-\item \href{#method-get_keys_with_value}{\code{Dictionary$get_keys_with_value()}}
-\item \href{#method-is_empty}{\code{Dictionary$is_empty()}}
-\item \href{#method-contains_key}{\code{Dictionary$contains_key()}}
-\item \href{#method-clone}{\code{Dictionary$clone()}}
+\item \href{#method-Dictionary-new}{\code{Dictionary$new()}}
+\item \href{#method-Dictionary-get}{\code{Dictionary$get()}}
+\item \href{#method-Dictionary-remove}{\code{Dictionary$remove()}}
+\item \href{#method-Dictionary-add_value_with_key}{\code{Dictionary$add_value_with_key()}}
+\item \href{#method-Dictionary-set_value_with_key}{\code{Dictionary$set_value_with_key()}}
+\item \href{#method-Dictionary-clear}{\code{Dictionary$clear()}}
+\item \href{#method-Dictionary-get_keys_with_value}{\code{Dictionary$get_keys_with_value()}}
+\item \href{#method-Dictionary-is_empty}{\code{Dictionary$is_empty()}}
+\item \href{#method-Dictionary-contains_key}{\code{Dictionary$contains_key()}}
+\item \href{#method-Dictionary-clone}{\code{Dictionary$clone()}}
 }
 }
-\if{html}{
-\out{<details open ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize">}\href{../../ModelPath/html/Serializable.html#method-serialize}{\code{ModelPath::Serializable$serialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize">}\href{../../ModelPath/html/Serializable.html#method-unserialize}{\code{ModelPath::Serializable$unserialize()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-serialize'><code>ModelPath::Serializable$serialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-unserialize'><code>ModelPath::Serializable$unserialize()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Dictionary-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Dictionary-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new dictionary. All keys must be unique.
 \subsection{Usage}{
@@ -86,8 +86,8 @@ Create a new dictionary. All keys must be unique.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get"></a>}}
-\if{latex}{\out{\hypertarget{method-get}{}}}
+\if{html}{\out{<a id="method-Dictionary-get"></a>}}
+\if{latex}{\out{\hypertarget{method-Dictionary-get}{}}}
 \subsection{Method \code{get()}}{
 Get the value by the key. The key can be a character or an index number
 \subsection{Usage}{
@@ -106,8 +106,8 @@ The value
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-remove"></a>}}
-\if{latex}{\out{\hypertarget{method-remove}{}}}
+\if{html}{\out{<a id="method-Dictionary-remove"></a>}}
+\if{latex}{\out{\hypertarget{method-Dictionary-remove}{}}}
 \subsection{Method \code{remove()}}{
 Remove the key-value in the dictionary.
 \subsection{Usage}{
@@ -123,8 +123,8 @@ Remove the key-value in the dictionary.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-add_value_with_key"></a>}}
-\if{latex}{\out{\hypertarget{method-add_value_with_key}{}}}
+\if{html}{\out{<a id="method-Dictionary-add_value_with_key"></a>}}
+\if{latex}{\out{\hypertarget{method-Dictionary-add_value_with_key}{}}}
 \subsection{Method \code{add_value_with_key()}}{
 Add a key-value in the dictionary
 \subsection{Usage}{
@@ -142,8 +142,8 @@ Add a key-value in the dictionary
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_value_with_key"></a>}}
-\if{latex}{\out{\hypertarget{method-set_value_with_key}{}}}
+\if{html}{\out{<a id="method-Dictionary-set_value_with_key"></a>}}
+\if{latex}{\out{\hypertarget{method-Dictionary-set_value_with_key}{}}}
 \subsection{Method \code{set_value_with_key()}}{
 Set a value based on the key already in the dictionary.
 \subsection{Usage}{
@@ -161,8 +161,8 @@ Set a value based on the key already in the dictionary.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clear"></a>}}
-\if{latex}{\out{\hypertarget{method-clear}{}}}
+\if{html}{\out{<a id="method-Dictionary-clear"></a>}}
+\if{latex}{\out{\hypertarget{method-Dictionary-clear}{}}}
 \subsection{Method \code{clear()}}{
 Remove all key-value items from the dictionary.
 \subsection{Usage}{
@@ -171,8 +171,8 @@ Remove all key-value items from the dictionary.
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_keys_with_value"></a>}}
-\if{latex}{\out{\hypertarget{method-get_keys_with_value}{}}}
+\if{html}{\out{<a id="method-Dictionary-get_keys_with_value"></a>}}
+\if{latex}{\out{\hypertarget{method-Dictionary-get_keys_with_value}{}}}
 \subsection{Method \code{get_keys_with_value()}}{
 Get all the keys containing a specific value
 \subsection{Usage}{
@@ -191,8 +191,8 @@ A vector
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-is_empty"></a>}}
-\if{latex}{\out{\hypertarget{method-is_empty}{}}}
+\if{html}{\out{<a id="method-Dictionary-is_empty"></a>}}
+\if{latex}{\out{\hypertarget{method-Dictionary-is_empty}{}}}
 \subsection{Method \code{is_empty()}}{
 Check if the dictionary is empty or not
 \subsection{Usage}{
@@ -204,8 +204,8 @@ Logical
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-contains_key"></a>}}
-\if{latex}{\out{\hypertarget{method-contains_key}{}}}
+\if{html}{\out{<a id="method-Dictionary-contains_key"></a>}}
+\if{latex}{\out{\hypertarget{method-Dictionary-contains_key}{}}}
 \subsection{Method \code{contains_key()}}{
 Check if the dictionary contains the key.
 \subsection{Usage}{
@@ -224,8 +224,8 @@ Logical
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Dictionary-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Dictionary-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

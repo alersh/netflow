@@ -22,57 +22,62 @@ Netflow integrates and manages all the networks in the environment
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Netflow$new()}}
-\item \href{#method-add_network}{\code{Netflow$add_network()}}
-\item \href{#method-remove_network}{\code{Netflow$remove_network()}}
-\item \href{#method-reset}{\code{Netflow$reset()}}
-\item \href{#method-clear_outputs}{\code{Netflow$clear_outputs()}}
-\item \href{#method-lock_networks}{\code{Netflow$lock_networks()}}
-\item \href{#method-add_nodes}{\code{Netflow$add_nodes()}}
-\item \href{#method-add_node}{\code{Netflow$add_node()}}
-\item \href{#method-remove_node}{\code{Netflow$remove_node()}}
-\item \href{#method-set_node_validity}{\code{Netflow$set_node_validity()}}
-\item \href{#method-set_status}{\code{Netflow$set_status()}}
-\item \href{#method-run}{\code{Netflow$run()}}
-\item \href{#method-summary}{\code{Netflow$summary()}}
-\item \href{#method-get_locked_networks}{\code{Netflow$get_locked_networks()}}
-\item \href{#method-net_flow}{\code{Netflow$net_flow()}}
-\item \href{#method-print}{\code{Netflow$print()}}
-\item \href{#method-plot_node_update}{\code{Netflow$plot_node_update()}}
-\item \href{#method-plot_network_update}{\code{Netflow$plot_network_update()}}
-\item \href{#method-server}{\code{Netflow$server()}}
-\item \href{#method-call}{\code{Netflow$call()}}
-\item \href{#method-clone}{\code{Netflow$clone()}}
+\item \href{#method-Netflow-new}{\code{Netflow$new()}}
+\item \href{#method-Netflow-add_network}{\code{Netflow$add_network()}}
+\item \href{#method-Netflow-remove_network}{\code{Netflow$remove_network()}}
+\item \href{#method-Netflow-reset}{\code{Netflow$reset()}}
+\item \href{#method-Netflow-clear_outputs}{\code{Netflow$clear_outputs()}}
+\item \href{#method-Netflow-lock_networks}{\code{Netflow$lock_networks()}}
+\item \href{#method-Netflow-add_nodes}{\code{Netflow$add_nodes()}}
+\item \href{#method-Netflow-add_node}{\code{Netflow$add_node()}}
+\item \href{#method-Netflow-remove_node}{\code{Netflow$remove_node()}}
+\item \href{#method-Netflow-set_node_validity}{\code{Netflow$set_node_validity()}}
+\item \href{#method-Netflow-set_status}{\code{Netflow$set_status()}}
+\item \href{#method-Netflow-run}{\code{Netflow$run()}}
+\item \href{#method-Netflow-summary}{\code{Netflow$summary()}}
+\item \href{#method-Netflow-get_locked_networks}{\code{Netflow$get_locked_networks()}}
+\item \href{#method-Netflow-net_flow}{\code{Netflow$net_flow()}}
+\item \href{#method-Netflow-print}{\code{Netflow$print()}}
+\item \href{#method-Netflow-plot_node_update}{\code{Netflow$plot_node_update()}}
+\item \href{#method-Netflow-plot_network_update}{\code{Netflow$plot_network_update()}}
+\item \href{#method-Netflow-server}{\code{Netflow$server()}}
+\item \href{#method-Netflow-call}{\code{Netflow$call()}}
+\item \href{#method-Netflow-clone}{\code{Netflow$clone()}}
 }
 }
-\if{html}{
-\out{<details ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize">}\href{../../ModelPath/html/Serializable.html#method-serialize}{\code{ModelPath::Serializable$serialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize">}\href{../../ModelPath/html/Serializable.html#method-unserialize}{\code{ModelPath::Serializable$unserialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="is_locked">}\href{../../ModelPath/html/Node.html#method-is_locked}{\code{ModelPath::Node$is_locked()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="lock_to_string">}\href{../../ModelPath/html/Node.html#method-lock_to_string}{\code{ModelPath::Node$lock_to_string()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="reset_status">}\href{../../ModelPath/html/Node.html#method-reset_status}{\code{ModelPath::Node$reset_status()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_lock">}\href{../../ModelPath/html/Node.html#method-set_lock}{\code{ModelPath::Node$set_lock()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_ui_editable">}\href{../../ModelPath/html/Node.html#method-set_ui_editable}{\code{ModelPath::Node$set_ui_editable()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_fail">}\href{../../ModelPath/html/Node.html#method-status_fail}{\code{ModelPath::Node$status_fail()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_idle">}\href{../../ModelPath/html/Node.html#method-status_idle}{\code{ModelPath::Node$status_idle()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_running">}\href{../../ModelPath/html/Node.html#method-status_running}{\code{ModelPath::Node$status_running()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_succeed">}\href{../../ModelPath/html/Node.html#method-status_succeed}{\code{ModelPath::Node$status_succeed()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="ui">}\href{../../ModelPath/html/Node.html#method-ui}{\code{ModelPath::Node$ui()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="add_edge">}\href{../../ModelPath/html/Network.html#method-add_edge}{\code{ModelPath::Network$add_edge()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="build">}\href{../../ModelPath/html/Network.html#method-build}{\code{ModelPath::Network$build()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="build_graph">}\href{../../ModelPath/html/Network.html#method-build_graph}{\code{ModelPath::Network$build_graph()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="get_locked_nodes">}\href{../../ModelPath/html/Network.html#method-get_locked_nodes}{\code{ModelPath::Network$get_locked_nodes()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="lock_all_nodes">}\href{../../ModelPath/html/Network.html#method-lock_all_nodes}{\code{ModelPath::Network$lock_all_nodes()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="plot">}\href{../../ModelPath/html/Network.html#method-plot}{\code{ModelPath::Network$plot()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="remove_edge">}\href{../../ModelPath/html/Network.html#method-remove_edge}{\code{ModelPath::Network$remove_edge()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-serialize'><code>ModelPath::Serializable$serialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-unserialize'><code>ModelPath::Serializable$unserialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="is_locked"><a href='../../ModelPath/html/Node.html#method-Node-is_locked'><code>ModelPath::Node$is_locked()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="lock_to_string"><a href='../../ModelPath/html/Node.html#method-Node-lock_to_string'><code>ModelPath::Node$lock_to_string()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="reset_status"><a href='../../ModelPath/html/Node.html#method-Node-reset_status'><code>ModelPath::Node$reset_status()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_lock"><a href='../../ModelPath/html/Node.html#method-Node-set_lock'><code>ModelPath::Node$set_lock()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_fail"><a href='../../ModelPath/html/Node.html#method-Node-set_status_fail'><code>ModelPath::Node$set_status_fail()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_idle"><a href='../../ModelPath/html/Node.html#method-Node-set_status_idle'><code>ModelPath::Node$set_status_idle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_running"><a href='../../ModelPath/html/Node.html#method-Node-set_status_running'><code>ModelPath::Node$set_status_running()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_succeed"><a href='../../ModelPath/html/Node.html#method-Node-set_status_succeed'><code>ModelPath::Node$set_status_succeed()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_ui_editable"><a href='../../ModelPath/html/Node.html#method-Node-set_ui_editable'><code>ModelPath::Node$set_ui_editable()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_fail"><a href='../../ModelPath/html/Node.html#method-Node-status_fail'><code>ModelPath::Node$status_fail()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_idle"><a href='../../ModelPath/html/Node.html#method-Node-status_idle'><code>ModelPath::Node$status_idle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_running"><a href='../../ModelPath/html/Node.html#method-Node-status_running'><code>ModelPath::Node$status_running()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_succeed"><a href='../../ModelPath/html/Node.html#method-Node-status_succeed'><code>ModelPath::Node$status_succeed()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="ui"><a href='../../ModelPath/html/Node.html#method-Node-ui'><code>ModelPath::Node$ui()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="add_edge"><a href='../../ModelPath/html/Network.html#method-Network-add_edge'><code>ModelPath::Network$add_edge()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="build"><a href='../../ModelPath/html/Network.html#method-Network-build'><code>ModelPath::Network$build()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="build_graph"><a href='../../ModelPath/html/Network.html#method-Network-build_graph'><code>ModelPath::Network$build_graph()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="get_locked_nodes"><a href='../../ModelPath/html/Network.html#method-Network-get_locked_nodes'><code>ModelPath::Network$get_locked_nodes()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="lock_all_nodes"><a href='../../ModelPath/html/Network.html#method-Network-lock_all_nodes'><code>ModelPath::Network$lock_all_nodes()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="ns"><a href='../../ModelPath/html/Network.html#method-Network-ns'><code>ModelPath::Network$ns()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="plot"><a href='../../ModelPath/html/Network.html#method-Network-plot'><code>ModelPath::Network$plot()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Network" data-id="remove_edge"><a href='../../ModelPath/html/Network.html#method-Network-remove_edge'><code>ModelPath::Network$remove_edge()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Netflow-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-new}{}}}
 \subsection{Method \code{new()}}{
 Create a Netflow object
 \subsection{Usage}{
@@ -98,8 +103,8 @@ add_network
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-add_network"></a>}}
-\if{latex}{\out{\hypertarget{method-add_network}{}}}
+\if{html}{\out{<a id="method-Netflow-add_network"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-add_network}{}}}
 \subsection{Method \code{add_network()}}{
 Add a network
 \subsection{Usage}{
@@ -116,8 +121,8 @@ remove_network}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-remove_network"></a>}}
-\if{latex}{\out{\hypertarget{method-remove_network}{}}}
+\if{html}{\out{<a id="method-Netflow-remove_network"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-remove_network}{}}}
 \subsection{Method \code{remove_network()}}{
 Remove a network
 \subsection{Usage}{
@@ -134,8 +139,8 @@ reset}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-reset"></a>}}
-\if{latex}{\out{\hypertarget{method-reset}{}}}
+\if{html}{\out{<a id="method-Netflow-reset"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-reset}{}}}
 \subsection{Method \code{reset()}}{
 Reset the networks by clearing all the outputs of all the
 unlocked nodes. Locked nodes are not reset.
@@ -153,8 +158,8 @@ clear_outputs}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clear_outputs"></a>}}
-\if{latex}{\out{\hypertarget{method-clear_outputs}{}}}
+\if{html}{\out{<a id="method-Netflow-clear_outputs"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-clear_outputs}{}}}
 \subsection{Method \code{clear_outputs()}}{
 Helper function that clears the outputs of all unlocked networks
 \subsection{Usage}{
@@ -171,8 +176,8 @@ lock_networks}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-lock_networks"></a>}}
-\if{latex}{\out{\hypertarget{method-lock_networks}{}}}
+\if{html}{\out{<a id="method-Netflow-lock_networks"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-lock_networks}{}}}
 \subsection{Method \code{lock_networks()}}{
 Lock all the nodes in the networks
 \subsection{Usage}{
@@ -191,8 +196,8 @@ add_nodes}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-add_nodes"></a>}}
-\if{latex}{\out{\hypertarget{method-add_nodes}{}}}
+\if{html}{\out{<a id="method-Netflow-add_nodes"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-add_nodes}{}}}
 \subsection{Method \code{add_nodes()}}{
 Add a series of nodes to a network
 \subsection{Usage}{
@@ -211,8 +216,8 @@ add_node}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-add_node"></a>}}
-\if{latex}{\out{\hypertarget{method-add_node}{}}}
+\if{html}{\out{<a id="method-Netflow-add_node"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-add_node}{}}}
 \subsection{Method \code{add_node()}}{
 Add a node to the network
 \subsection{Usage}{
@@ -231,8 +236,8 @@ remove_node}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-remove_node"></a>}}
-\if{latex}{\out{\hypertarget{method-remove_node}{}}}
+\if{html}{\out{<a id="method-Netflow-remove_node"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-remove_node}{}}}
 \subsection{Method \code{remove_node()}}{
 Remove a node from the network
 \subsection{Usage}{
@@ -249,8 +254,8 @@ set_node_validity}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_node_validity"></a>}}
-\if{latex}{\out{\hypertarget{method-set_node_validity}{}}}
+\if{html}{\out{<a id="method-Netflow-set_node_validity"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-set_node_validity}{}}}
 \subsection{Method \code{set_node_validity()}}{
 A convenient function that sets the validity of the nodes
 in the network. A node is valid if it has a function. Nodes that are valid
@@ -263,8 +268,8 @@ set_status
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_status"></a>}}
-\if{latex}{\out{\hypertarget{method-set_status}{}}}
+\if{html}{\out{<a id="method-Netflow-set_status"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-set_status}{}}}
 \subsection{Method \code{set_status()}}{
 Get the current status of the network
 \subsection{Usage}{
@@ -282,8 +287,8 @@ run}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-run"></a>}}
-\if{latex}{\out{\hypertarget{method-run}{}}}
+\if{html}{\out{<a id="method-Netflow-run"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-run}{}}}
 \subsection{Method \code{run()}}{
 Run the network by executing all the node operations sequentially
 \subsection{Usage}{
@@ -300,8 +305,8 @@ node will be be run.}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-summary"></a>}}
-\if{latex}{\out{\hypertarget{method-summary}{}}}
+\if{html}{\out{<a id="method-Netflow-summary"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-summary}{}}}
 \subsection{Method \code{summary()}}{
 summarize the Netflow
 \subsection{Usage}{
@@ -314,8 +319,8 @@ get_locked_networks
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_locked_networks"></a>}}
-\if{latex}{\out{\hypertarget{method-get_locked_networks}{}}}
+\if{html}{\out{<a id="method-Netflow-get_locked_networks"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-get_locked_networks}{}}}
 \subsection{Method \code{get_locked_networks()}}{
 Get all the locked networks
 \subsection{Usage}{
@@ -328,8 +333,8 @@ net_flow
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-net_flow"></a>}}
-\if{latex}{\out{\hypertarget{method-net_flow}{}}}
+\if{html}{\out{<a id="method-Netflow-net_flow"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-net_flow}{}}}
 \subsection{Method \code{net_flow()}}{
 Run the Netflow shiny gadget
 \subsection{Usage}{
@@ -338,8 +343,8 @@ Run the Netflow shiny gadget
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
+\if{html}{\out{<a id="method-Netflow-print"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-print}{}}}
 \subsection{Method \code{print()}}{
 Display the network graphically
 plot_node_update
@@ -349,8 +354,8 @@ plot_node_update
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-plot_node_update"></a>}}
-\if{latex}{\out{\hypertarget{method-plot_node_update}{}}}
+\if{html}{\out{<a id="method-Netflow-plot_node_update"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-plot_node_update}{}}}
 \subsection{Method \code{plot_node_update()}}{
 Update the plot of the node in visnetwork
 \subsection{Usage}{
@@ -369,8 +374,8 @@ plot_network_update}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-plot_network_update"></a>}}
-\if{latex}{\out{\hypertarget{method-plot_network_update}{}}}
+\if{html}{\out{<a id="method-Netflow-plot_network_update"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-plot_network_update}{}}}
 \subsection{Method \code{plot_network_update()}}{
 Update a network in the Netflow.
 \subsection{Usage}{
@@ -387,8 +392,8 @@ server}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-server"></a>}}
-\if{latex}{\out{\hypertarget{method-server}{}}}
+\if{html}{\out{<a id="method-Netflow-server"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-server}{}}}
 \subsection{Method \code{server()}}{
 the server
 \subsection{Usage}{
@@ -409,8 +414,8 @@ call}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-call"></a>}}
-\if{latex}{\out{\hypertarget{method-call}{}}}
+\if{html}{\out{<a id="method-Netflow-call"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-call}{}}}
 \subsection{Method \code{call()}}{
 call the module
 \subsection{Usage}{
@@ -430,8 +435,8 @@ call the module
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Netflow-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Netflow-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

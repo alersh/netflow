@@ -30,25 +30,25 @@ Specifies the structure of the network
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Network_Structure$new()}}
-\item \href{#method-restore_edge}{\code{Network_Structure$restore_edge()}}
-\item \href{#method-remove_edge}{\code{Network_Structure$remove_edge()}}
-\item \href{#method-build}{\code{Network_Structure$build()}}
-\item \href{#method-build_graph}{\code{Network_Structure$build_graph()}}
-\item \href{#method-clone}{\code{Network_Structure$clone()}}
+\item \href{#method-Network_Structure-new}{\code{Network_Structure$new()}}
+\item \href{#method-Network_Structure-restore_edge}{\code{Network_Structure$restore_edge()}}
+\item \href{#method-Network_Structure-remove_edge}{\code{Network_Structure$remove_edge()}}
+\item \href{#method-Network_Structure-build}{\code{Network_Structure$build()}}
+\item \href{#method-Network_Structure-build_graph}{\code{Network_Structure$build_graph()}}
+\item \href{#method-Network_Structure-clone}{\code{Network_Structure$clone()}}
 }
 }
-\if{html}{
-\out{<details open ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize">}\href{../../ModelPath/html/Serializable.html#method-serialize}{\code{ModelPath::Serializable$serialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize">}\href{../../ModelPath/html/Serializable.html#method-unserialize}{\code{ModelPath::Serializable$unserialize()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-serialize'><code>ModelPath::Serializable$serialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-unserialize'><code>ModelPath::Serializable$unserialize()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Network_Structure-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Structure-new}{}}}
 \subsection{Method \code{new()}}{
 Creates a Network_Structure object
 \subsection{Usage}{
@@ -70,8 +70,8 @@ restore edge
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-restore_edge"></a>}}
-\if{latex}{\out{\hypertarget{method-restore_edge}{}}}
+\if{html}{\out{<a id="method-Network_Structure-restore_edge"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Structure-restore_edge}{}}}
 \subsection{Method \code{restore_edge()}}{
 Restore an edge that has been temporarily removed
 \subsection{Usage}{
@@ -88,8 +88,8 @@ remove_edge}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-remove_edge"></a>}}
-\if{latex}{\out{\hypertarget{method-remove_edge}{}}}
+\if{html}{\out{<a id="method-Network_Structure-remove_edge"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Structure-remove_edge}{}}}
 \subsection{Method \code{remove_edge()}}{
 Remove an edge from the structure
 \subsection{Usage}{
@@ -107,8 +107,8 @@ Remove an edge from the structure
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-build"></a>}}
-\if{latex}{\out{\hypertarget{method-build}{}}}
+\if{html}{\out{<a id="method-Network_Structure-build"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Structure-build}{}}}
 \subsection{Method \code{build()}}{
 Build the configuration of the network for display
 \subsection{Usage}{
@@ -125,8 +125,8 @@ build_graph}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-build_graph"></a>}}
-\if{latex}{\out{\hypertarget{method-build_graph}{}}}
+\if{html}{\out{<a id="method-Network_Structure-build_graph"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Structure-build_graph}{}}}
 \subsection{Method \code{build_graph()}}{
 Build the graph display
 \subsection{Usage}{
@@ -142,8 +142,8 @@ Build the graph display
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Network_Structure-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Structure-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

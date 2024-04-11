@@ -37,38 +37,42 @@ visualization}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Process_Node$new()}}
-\item \href{#method-run}{\code{Process_Node$run()}}
-\item \href{#method-set_validity}{\code{Process_Node$set_validity()}}
-\item \href{#method-clear_output}{\code{Process_Node$clear_output()}}
-\item \href{#method-reset}{\code{Process_Node$reset()}}
-\item \href{#method-ui}{\code{Process_Node$ui()}}
-\item \href{#method-server}{\code{Process_Node$server()}}
-\item \href{#method-set_ui_editable}{\code{Process_Node$set_ui_editable()}}
-\item \href{#method-clone}{\code{Process_Node$clone()}}
+\item \href{#method-Process_Node-new}{\code{Process_Node$new()}}
+\item \href{#method-Process_Node-run}{\code{Process_Node$run()}}
+\item \href{#method-Process_Node-set_validity}{\code{Process_Node$set_validity()}}
+\item \href{#method-Process_Node-clear_output}{\code{Process_Node$clear_output()}}
+\item \href{#method-Process_Node-reset}{\code{Process_Node$reset()}}
+\item \href{#method-Process_Node-ui}{\code{Process_Node$ui()}}
+\item \href{#method-Process_Node-server}{\code{Process_Node$server()}}
+\item \href{#method-Process_Node-set_ui_editable}{\code{Process_Node$set_ui_editable()}}
+\item \href{#method-Process_Node-clone}{\code{Process_Node$clone()}}
 }
 }
-\if{html}{
-\out{<details ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize">}\href{../../ModelPath/html/Serializable.html#method-serialize}{\code{ModelPath::Serializable$serialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize">}\href{../../ModelPath/html/Serializable.html#method-unserialize}{\code{ModelPath::Serializable$unserialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="call">}\href{../../ModelPath/html/Node.html#method-call}{\code{ModelPath::Node$call()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="is_locked">}\href{../../ModelPath/html/Node.html#method-is_locked}{\code{ModelPath::Node$is_locked()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="lock_to_string">}\href{../../ModelPath/html/Node.html#method-lock_to_string}{\code{ModelPath::Node$lock_to_string()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="reset_status">}\href{../../ModelPath/html/Node.html#method-reset_status}{\code{ModelPath::Node$reset_status()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_lock">}\href{../../ModelPath/html/Node.html#method-set_lock}{\code{ModelPath::Node$set_lock()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status">}\href{../../ModelPath/html/Node.html#method-set_status}{\code{ModelPath::Node$set_status()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_fail">}\href{../../ModelPath/html/Node.html#method-status_fail}{\code{ModelPath::Node$status_fail()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_idle">}\href{../../ModelPath/html/Node.html#method-status_idle}{\code{ModelPath::Node$status_idle()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_running">}\href{../../ModelPath/html/Node.html#method-status_running}{\code{ModelPath::Node$status_running()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_succeed">}\href{../../ModelPath/html/Node.html#method-status_succeed}{\code{ModelPath::Node$status_succeed()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-serialize'><code>ModelPath::Serializable$serialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-unserialize'><code>ModelPath::Serializable$unserialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="call"><a href='../../ModelPath/html/Node.html#method-Node-call'><code>ModelPath::Node$call()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="is_locked"><a href='../../ModelPath/html/Node.html#method-Node-is_locked'><code>ModelPath::Node$is_locked()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="lock_to_string"><a href='../../ModelPath/html/Node.html#method-Node-lock_to_string'><code>ModelPath::Node$lock_to_string()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="reset_status"><a href='../../ModelPath/html/Node.html#method-Node-reset_status'><code>ModelPath::Node$reset_status()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_lock"><a href='../../ModelPath/html/Node.html#method-Node-set_lock'><code>ModelPath::Node$set_lock()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status"><a href='../../ModelPath/html/Node.html#method-Node-set_status'><code>ModelPath::Node$set_status()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_fail"><a href='../../ModelPath/html/Node.html#method-Node-set_status_fail'><code>ModelPath::Node$set_status_fail()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_idle"><a href='../../ModelPath/html/Node.html#method-Node-set_status_idle'><code>ModelPath::Node$set_status_idle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_running"><a href='../../ModelPath/html/Node.html#method-Node-set_status_running'><code>ModelPath::Node$set_status_running()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_succeed"><a href='../../ModelPath/html/Node.html#method-Node-set_status_succeed'><code>ModelPath::Node$set_status_succeed()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_fail"><a href='../../ModelPath/html/Node.html#method-Node-status_fail'><code>ModelPath::Node$status_fail()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_idle"><a href='../../ModelPath/html/Node.html#method-Node-status_idle'><code>ModelPath::Node$status_idle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_running"><a href='../../ModelPath/html/Node.html#method-Node-status_running'><code>ModelPath::Node$status_running()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_succeed"><a href='../../ModelPath/html/Node.html#method-Node-status_succeed'><code>ModelPath::Node$status_succeed()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Process_Node-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Process_Node-new}{}}}
 \subsection{Method \code{new()}}{
 Create a node
 \subsection{Usage}{
@@ -107,8 +111,8 @@ A Process_Node object
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-run"></a>}}
-\if{latex}{\out{\hypertarget{method-run}{}}}
+\if{html}{\out{<a id="method-Process_Node-run"></a>}}
+\if{latex}{\out{\hypertarget{method-Process_Node-run}{}}}
 \subsection{Method \code{run()}}{
 Run the function of this node
 \subsection{Usage}{
@@ -127,8 +131,8 @@ set_validity}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_validity"></a>}}
-\if{latex}{\out{\hypertarget{method-set_validity}{}}}
+\if{html}{\out{<a id="method-Process_Node-set_validity"></a>}}
+\if{latex}{\out{\hypertarget{method-Process_Node-set_validity}{}}}
 \subsection{Method \code{set_validity()}}{
 Set the validity of the node. A node is considered valid
 if it contains a function
@@ -139,8 +143,8 @@ clear_output
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clear_output"></a>}}
-\if{latex}{\out{\hypertarget{method-clear_output}{}}}
+\if{html}{\out{<a id="method-Process_Node-clear_output"></a>}}
+\if{latex}{\out{\hypertarget{method-Process_Node-clear_output}{}}}
 \subsection{Method \code{clear_output()}}{
 Clear the output of this node
 reset
@@ -150,8 +154,8 @@ reset
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-reset"></a>}}
-\if{latex}{\out{\hypertarget{method-reset}{}}}
+\if{html}{\out{<a id="method-Process_Node-reset"></a>}}
+\if{latex}{\out{\hypertarget{method-Process_Node-reset}{}}}
 \subsection{Method \code{reset()}}{
 Reset the node's status and clear output
 ui
@@ -161,8 +165,8 @@ ui
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ui"></a>}}
-\if{latex}{\out{\hypertarget{method-ui}{}}}
+\if{html}{\out{<a id="method-Process_Node-ui"></a>}}
+\if{latex}{\out{\hypertarget{method-Process_Node-ui}{}}}
 \subsection{Method \code{ui()}}{
 Create the Shiny UI elements of the process node
 \subsection{Usage}{
@@ -179,8 +183,8 @@ server}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-server"></a>}}
-\if{latex}{\out{\hypertarget{method-server}{}}}
+\if{html}{\out{<a id="method-Process_Node-server"></a>}}
+\if{latex}{\out{\hypertarget{method-Process_Node-server}{}}}
 \subsection{Method \code{server()}}{
 Create the Shiny server
 \subsection{Usage}{
@@ -203,8 +207,8 @@ set_ui_editable}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_ui_editable"></a>}}
-\if{latex}{\out{\hypertarget{method-set_ui_editable}{}}}
+\if{html}{\out{<a id="method-Process_Node-set_ui_editable"></a>}}
+\if{latex}{\out{\hypertarget{method-Process_Node-set_ui_editable}{}}}
 \subsection{Method \code{set_ui_editable()}}{
 Set which uis are editable. Only the status, function, and description
 can be set
@@ -226,8 +230,8 @@ output}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Process_Node-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Process_Node-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

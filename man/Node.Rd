@@ -38,34 +38,38 @@ A node contains an ID, the name of the author, the description, and the display 
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Node$new()}}
-\item \href{#method-lock_to_string}{\code{Node$lock_to_string()}}
-\item \href{#method-is_locked}{\code{Node$is_locked()}}
-\item \href{#method-set_lock}{\code{Node$set_lock()}}
-\item \href{#method-reset_status}{\code{Node$reset_status()}}
-\item \href{#method-set_status}{\code{Node$set_status()}}
-\item \href{#method-status_fail}{\code{Node$status_fail()}}
-\item \href{#method-status_running}{\code{Node$status_running()}}
-\item \href{#method-status_succeed}{\code{Node$status_succeed()}}
-\item \href{#method-status_idle}{\code{Node$status_idle()}}
-\item \href{#method-ui}{\code{Node$ui()}}
-\item \href{#method-server}{\code{Node$server()}}
-\item \href{#method-call}{\code{Node$call()}}
-\item \href{#method-set_ui_editable}{\code{Node$set_ui_editable()}}
-\item \href{#method-clone}{\code{Node$clone()}}
+\item \href{#method-Node-new}{\code{Node$new()}}
+\item \href{#method-Node-lock_to_string}{\code{Node$lock_to_string()}}
+\item \href{#method-Node-is_locked}{\code{Node$is_locked()}}
+\item \href{#method-Node-set_lock}{\code{Node$set_lock()}}
+\item \href{#method-Node-reset_status}{\code{Node$reset_status()}}
+\item \href{#method-Node-set_status}{\code{Node$set_status()}}
+\item \href{#method-Node-status_fail}{\code{Node$status_fail()}}
+\item \href{#method-Node-status_running}{\code{Node$status_running()}}
+\item \href{#method-Node-status_succeed}{\code{Node$status_succeed()}}
+\item \href{#method-Node-status_idle}{\code{Node$status_idle()}}
+\item \href{#method-Node-set_status_fail}{\code{Node$set_status_fail()}}
+\item \href{#method-Node-set_status_running}{\code{Node$set_status_running()}}
+\item \href{#method-Node-set_status_succeed}{\code{Node$set_status_succeed()}}
+\item \href{#method-Node-set_status_idle}{\code{Node$set_status_idle()}}
+\item \href{#method-Node-ui}{\code{Node$ui()}}
+\item \href{#method-Node-server}{\code{Node$server()}}
+\item \href{#method-Node-call}{\code{Node$call()}}
+\item \href{#method-Node-set_ui_editable}{\code{Node$set_ui_editable()}}
+\item \href{#method-Node-clone}{\code{Node$clone()}}
 }
 }
-\if{html}{
-\out{<details open ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize">}\href{../../ModelPath/html/Serializable.html#method-serialize}{\code{ModelPath::Serializable$serialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize">}\href{../../ModelPath/html/Serializable.html#method-unserialize}{\code{ModelPath::Serializable$unserialize()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-serialize'><code>ModelPath::Serializable$serialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-unserialize'><code>ModelPath::Serializable$unserialize()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Node-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-new}{}}}
 \subsection{Method \code{new()}}{
 Create a node
 \subsection{Usage}{
@@ -93,8 +97,8 @@ lock_to_string
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-lock_to_string"></a>}}
-\if{latex}{\out{\hypertarget{method-lock_to_string}{}}}
+\if{html}{\out{<a id="method-Node-lock_to_string"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-lock_to_string}{}}}
 \subsection{Method \code{lock_to_string()}}{
 Return 'lock' if the node is locked, 'unlock' otherwise
 \subsection{Usage}{
@@ -114,8 +118,8 @@ is_locked
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-is_locked"></a>}}
-\if{latex}{\out{\hypertarget{method-is_locked}{}}}
+\if{html}{\out{<a id="method-Node-is_locked"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-is_locked}{}}}
 \subsection{Method \code{is_locked()}}{
 Get the current state of the lock
 \subsection{Usage}{
@@ -128,8 +132,8 @@ set_lock
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_lock"></a>}}
-\if{latex}{\out{\hypertarget{method-set_lock}{}}}
+\if{html}{\out{<a id="method-Node-set_lock"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-set_lock}{}}}
 \subsection{Method \code{set_lock()}}{
 Lock or unlock this node
 \subsection{Usage}{
@@ -146,8 +150,8 @@ reset_status}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-reset_status"></a>}}
-\if{latex}{\out{\hypertarget{method-reset_status}{}}}
+\if{html}{\out{<a id="method-Node-reset_status"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-reset_status}{}}}
 \subsection{Method \code{reset_status()}}{
 Reset the status of the node to 'idle'. It will empty out
 the error message and warning message.
@@ -158,8 +162,8 @@ set_status
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_status"></a>}}
-\if{latex}{\out{\hypertarget{method-set_status}{}}}
+\if{html}{\out{<a id="method-Node-set_status"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-set_status}{}}}
 \subsection{Method \code{set_status()}}{
 Set the current status of the network
 \subsection{Usage}{
@@ -177,8 +181,8 @@ status_fail}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-status_fail"></a>}}
-\if{latex}{\out{\hypertarget{method-status_fail}{}}}
+\if{html}{\out{<a id="method-Node-status_fail"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-status_fail}{}}}
 \subsection{Method \code{status_fail()}}{
 Check if the current status is a fail
 \subsection{Usage}{
@@ -191,8 +195,8 @@ status_running
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-status_running"></a>}}
-\if{latex}{\out{\hypertarget{method-status_running}{}}}
+\if{html}{\out{<a id="method-Node-status_running"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-status_running}{}}}
 \subsection{Method \code{status_running()}}{
 Check if the current status is running
 \subsection{Usage}{
@@ -205,8 +209,8 @@ status_succeed
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-status_succeed"></a>}}
-\if{latex}{\out{\hypertarget{method-status_succeed}{}}}
+\if{html}{\out{<a id="method-Node-status_succeed"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-status_succeed}{}}}
 \subsection{Method \code{status_succeed()}}{
 Check if the current status is a success
 \subsection{Usage}{
@@ -219,8 +223,8 @@ status_idle
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-status_idle"></a>}}
-\if{latex}{\out{\hypertarget{method-status_idle}{}}}
+\if{html}{\out{<a id="method-Node-status_idle"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-status_idle}{}}}
 \subsection{Method \code{status_idle()}}{
 Check if the current status is in idle
 \subsection{Usage}{
@@ -229,12 +233,56 @@ Check if the current status is in idle
 
 \subsection{Returns}{
 A logical
-ui
+set_status_fail
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ui"></a>}}
-\if{latex}{\out{\hypertarget{method-ui}{}}}
+\if{html}{\out{<a id="method-Node-set_status_fail"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-set_status_fail}{}}}
+\subsection{Method \code{set_status_fail()}}{
+Set the current status to fail
+set_status_running
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Node$set_status_fail()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Node-set_status_running"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-set_status_running}{}}}
+\subsection{Method \code{set_status_running()}}{
+Set the current status to running
+set_status_succeed
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Node$set_status_running()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Node-set_status_succeed"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-set_status_succeed}{}}}
+\subsection{Method \code{set_status_succeed()}}{
+Set the current status to success
+set_status_idle
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Node$set_status_succeed()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Node-set_status_idle"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-set_status_idle}{}}}
+\subsection{Method \code{set_status_idle()}}{
+Set the current status to idle
+ui
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Node$set_status_idle()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Node-ui"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-ui}{}}}
 \subsection{Method \code{ui()}}{
 UI
 \subsection{Usage}{
@@ -250,8 +298,8 @@ UI
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-server"></a>}}
-\if{latex}{\out{\hypertarget{method-server}{}}}
+\if{html}{\out{<a id="method-Node-server"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-server}{}}}
 \subsection{Method \code{server()}}{
 The node server
 \subsection{Usage}{
@@ -274,8 +322,8 @@ call}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-call"></a>}}
-\if{latex}{\out{\hypertarget{method-call}{}}}
+\if{html}{\out{<a id="method-Node-call"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-call}{}}}
 \subsection{Method \code{call()}}{
 Call the module
 \subsection{Usage}{
@@ -295,8 +343,8 @@ Call the module
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_ui_editable"></a>}}
-\if{latex}{\out{\hypertarget{method-set_ui_editable}{}}}
+\if{html}{\out{<a id="method-Node-set_ui_editable"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-set_ui_editable}{}}}
 \subsection{Method \code{set_ui_editable()}}{
 Set which uis are editable
 \subsection{Usage}{
@@ -314,8 +362,8 @@ Set which uis are editable
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Node-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Node-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

@@ -7,7 +7,7 @@
 A Function class
 }
 \details{
-The Funtion object stores the function, the arguments, the parameter, and the methods
+The Function object stores the function, the arguments, the parameter, and the methods
 used to process the function.
 }
 \section{Super class}{
@@ -31,27 +31,27 @@ used to process the function.
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Function$new()}}
-\item \href{#method-make_function_string}{\code{Function$make_function_string()}}
-\item \href{#method-options_to_string}{\code{Function$options_to_string()}}
-\item \href{#method-set_option}{\code{Function$set_option()}}
-\item \href{#method-add_arg}{\code{Function$add_arg()}}
-\item \href{#method-remove_arg}{\code{Function$remove_arg()}}
-\item \href{#method-set_data_type}{\code{Function$set_data_type()}}
-\item \href{#method-clone}{\code{Function$clone()}}
+\item \href{#method-Function-new}{\code{Function$new()}}
+\item \href{#method-Function-make_function_string}{\code{Function$make_function_string()}}
+\item \href{#method-Function-options_to_string}{\code{Function$options_to_string()}}
+\item \href{#method-Function-set_option}{\code{Function$set_option()}}
+\item \href{#method-Function-add_arg}{\code{Function$add_arg()}}
+\item \href{#method-Function-remove_arg}{\code{Function$remove_arg()}}
+\item \href{#method-Function-set_data_type}{\code{Function$set_data_type()}}
+\item \href{#method-Function-clone}{\code{Function$clone()}}
 }
 }
-\if{html}{
-\out{<details open ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize">}\href{../../ModelPath/html/Serializable.html#method-serialize}{\code{ModelPath::Serializable$serialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize">}\href{../../ModelPath/html/Serializable.html#method-unserialize}{\code{ModelPath::Serializable$unserialize()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-serialize'><code>ModelPath::Serializable$serialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-unserialize'><code>ModelPath::Serializable$unserialize()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Function-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Function-new}{}}}
 \subsection{Method \code{new()}}{
 Specify the node's function, arguments, options, and argument types. If options is NULL, node_function
 will try to extract the options from this function given the input arguments.
@@ -89,8 +89,8 @@ A Function object
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-make_function_string"></a>}}
-\if{latex}{\out{\hypertarget{method-make_function_string}{}}}
+\if{html}{\out{<a id="method-Function-make_function_string"></a>}}
+\if{latex}{\out{\hypertarget{method-Function-make_function_string}{}}}
 \subsection{Method \code{make_function_string()}}{
 Turn the function into a character string so that it can be evaluated by eval
 \subsection{Usage}{
@@ -109,8 +109,8 @@ The string of the function
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-options_to_string"></a>}}
-\if{latex}{\out{\hypertarget{method-options_to_string}{}}}
+\if{html}{\out{<a id="method-Function-options_to_string"></a>}}
+\if{latex}{\out{\hypertarget{method-Function-options_to_string}{}}}
 \subsection{Method \code{options_to_string()}}{
 Convert a list of options into a string. To be used in do.call.
 \subsection{Usage}{
@@ -122,8 +122,8 @@ A string
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_option"></a>}}
-\if{latex}{\out{\hypertarget{method-set_option}{}}}
+\if{html}{\out{<a id="method-Function-set_option"></a>}}
+\if{latex}{\out{\hypertarget{method-Function-set_option}{}}}
 \subsection{Method \code{set_option()}}{
 Set the value of an option
 \subsection{Usage}{
@@ -141,8 +141,8 @@ Set the value of an option
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-add_arg"></a>}}
-\if{latex}{\out{\hypertarget{method-add_arg}{}}}
+\if{html}{\out{<a id="method-Function-add_arg"></a>}}
+\if{latex}{\out{\hypertarget{method-Function-add_arg}{}}}
 \subsection{Method \code{add_arg()}}{
 Add a new input argument so that it can be used as a socket for an output from an
 input node. This new input argument will automatically be removed from the function options.
@@ -159,8 +159,8 @@ input node. This new input argument will automatically be removed from the funct
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-remove_arg"></a>}}
-\if{latex}{\out{\hypertarget{method-remove_arg}{}}}
+\if{html}{\out{<a id="method-Function-remove_arg"></a>}}
+\if{latex}{\out{\hypertarget{method-Function-remove_arg}{}}}
 \subsection{Method \code{remove_arg()}}{
 Remove an input argument so that it can no longer be used as socket for an output
 from an input node. The removed argument will be automatically added back to the  function options
@@ -177,8 +177,8 @@ from an input node. The removed argument will be automatically added back to the
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_data_type"></a>}}
-\if{latex}{\out{\hypertarget{method-set_data_type}{}}}
+\if{html}{\out{<a id="method-Function-set_data_type"></a>}}
+\if{latex}{\out{\hypertarget{method-Function-set_data_type}{}}}
 \subsection{Method \code{set_data_type()}}{
 Set the data/object type of an argument.
 \subsection{Usage}{
@@ -196,8 +196,8 @@ Set the data/object type of an argument.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Function-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Function-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

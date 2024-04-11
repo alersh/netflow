@@ -24,28 +24,28 @@ A set is similar to a vector, except that all objects must be unique.
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Set$new()}}
-\item \href{#method-add}{\code{Set$add()}}
-\item \href{#method-get}{\code{Set$get()}}
-\item \href{#method-remove}{\code{Set$remove()}}
-\item \href{#method-remove_at}{\code{Set$remove_at()}}
-\item \href{#method-contains}{\code{Set$contains()}}
-\item \href{#method-clear}{\code{Set$clear()}}
-\item \href{#method-is_empty}{\code{Set$is_empty()}}
-\item \href{#method-clone}{\code{Set$clone()}}
+\item \href{#method-Set-new}{\code{Set$new()}}
+\item \href{#method-Set-add}{\code{Set$add()}}
+\item \href{#method-Set-get}{\code{Set$get()}}
+\item \href{#method-Set-remove}{\code{Set$remove()}}
+\item \href{#method-Set-remove_at}{\code{Set$remove_at()}}
+\item \href{#method-Set-contains}{\code{Set$contains()}}
+\item \href{#method-Set-clear}{\code{Set$clear()}}
+\item \href{#method-Set-is_empty}{\code{Set$is_empty()}}
+\item \href{#method-Set-clone}{\code{Set$clone()}}
 }
 }
-\if{html}{
-\out{<details open ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize">}\href{../../ModelPath/html/Serializable.html#method-serialize}{\code{ModelPath::Serializable$serialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize">}\href{../../ModelPath/html/Serializable.html#method-unserialize}{\code{ModelPath::Serializable$unserialize()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-serialize'><code>ModelPath::Serializable$serialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-unserialize'><code>ModelPath::Serializable$unserialize()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Set-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Set-new}{}}}
 \subsection{Method \code{new()}}{
 Creates a new Set
 \subsection{Usage}{
@@ -68,8 +68,8 @@ A Set object
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-add"></a>}}
-\if{latex}{\out{\hypertarget{method-add}{}}}
+\if{html}{\out{<a id="method-Set-add"></a>}}
+\if{latex}{\out{\hypertarget{method-Set-add}{}}}
 \subsection{Method \code{add()}}{
 Add a new object into the Set.
 \subsection{Usage}{
@@ -85,8 +85,8 @@ Add a new object into the Set.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get"></a>}}
-\if{latex}{\out{\hypertarget{method-get}{}}}
+\if{html}{\out{<a id="method-Set-get"></a>}}
+\if{latex}{\out{\hypertarget{method-Set-get}{}}}
 \subsection{Method \code{get()}}{
 Get an object based on the index
 \subsection{Usage}{
@@ -102,8 +102,8 @@ Get an object based on the index
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-remove"></a>}}
-\if{latex}{\out{\hypertarget{method-remove}{}}}
+\if{html}{\out{<a id="method-Set-remove"></a>}}
+\if{latex}{\out{\hypertarget{method-Set-remove}{}}}
 \subsection{Method \code{remove()}}{
 Remove an object from the set.
 \subsection{Usage}{
@@ -119,8 +119,8 @@ Remove an object from the set.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-remove_at"></a>}}
-\if{latex}{\out{\hypertarget{method-remove_at}{}}}
+\if{html}{\out{<a id="method-Set-remove_at"></a>}}
+\if{latex}{\out{\hypertarget{method-Set-remove_at}{}}}
 \subsection{Method \code{remove_at()}}{
 Remove an object based upon the index
 \subsection{Usage}{
@@ -136,8 +136,8 @@ Remove an object based upon the index
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-contains"></a>}}
-\if{latex}{\out{\hypertarget{method-contains}{}}}
+\if{html}{\out{<a id="method-Set-contains"></a>}}
+\if{latex}{\out{\hypertarget{method-Set-contains}{}}}
 \subsection{Method \code{contains()}}{
 Check if the set contains the object
 \subsection{Usage}{
@@ -156,8 +156,8 @@ Logical
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clear"></a>}}
-\if{latex}{\out{\hypertarget{method-clear}{}}}
+\if{html}{\out{<a id="method-Set-clear"></a>}}
+\if{latex}{\out{\hypertarget{method-Set-clear}{}}}
 \subsection{Method \code{clear()}}{
 Clear all items in the set.
 \subsection{Usage}{
@@ -166,8 +166,8 @@ Clear all items in the set.
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-is_empty"></a>}}
-\if{latex}{\out{\hypertarget{method-is_empty}{}}}
+\if{html}{\out{<a id="method-Set-is_empty"></a>}}
+\if{latex}{\out{\hypertarget{method-Set-is_empty}{}}}
 \subsection{Method \code{is_empty()}}{
 Check if the set is empty.
 \subsection{Usage}{
@@ -179,8 +179,8 @@ Logical
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Set-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Set-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

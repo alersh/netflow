@@ -27,28 +27,28 @@ initialize
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Network_Graph$new()}}
-\item \href{#method-get_node}{\code{Network_Graph$get_node()}}
-\item \href{#method-set_node_color}{\code{Network_Graph$set_node_color()}}
-\item \href{#method-set_node_shape}{\code{Network_Graph$set_node_shape()}}
-\item \href{#method-set_node_border}{\code{Network_Graph$set_node_border()}}
-\item \href{#method-set_node_label}{\code{Network_Graph$set_node_label()}}
-\item \href{#method-is_empty}{\code{Network_Graph$is_empty()}}
-\item \href{#method-build_graph}{\code{Network_Graph$build_graph()}}
-\item \href{#method-clone}{\code{Network_Graph$clone()}}
+\item \href{#method-Network_Graph-new}{\code{Network_Graph$new()}}
+\item \href{#method-Network_Graph-get_node}{\code{Network_Graph$get_node()}}
+\item \href{#method-Network_Graph-set_node_color}{\code{Network_Graph$set_node_color()}}
+\item \href{#method-Network_Graph-set_node_shape}{\code{Network_Graph$set_node_shape()}}
+\item \href{#method-Network_Graph-set_node_border}{\code{Network_Graph$set_node_border()}}
+\item \href{#method-Network_Graph-set_node_label}{\code{Network_Graph$set_node_label()}}
+\item \href{#method-Network_Graph-is_empty}{\code{Network_Graph$is_empty()}}
+\item \href{#method-Network_Graph-build_graph}{\code{Network_Graph$build_graph()}}
+\item \href{#method-Network_Graph-clone}{\code{Network_Graph$clone()}}
 }
 }
-\if{html}{
-\out{<details open ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize">}\href{../../ModelPath/html/Serializable.html#method-serialize}{\code{ModelPath::Serializable$serialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize">}\href{../../ModelPath/html/Serializable.html#method-unserialize}{\code{ModelPath::Serializable$unserialize()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-serialize'><code>ModelPath::Serializable$serialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-unserialize'><code>ModelPath::Serializable$unserialize()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Network_Graph-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Graph-new}{}}}
 \subsection{Method \code{new()}}{
 Create a graph object
 \subsection{Usage}{
@@ -68,8 +68,8 @@ get_node
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_node"></a>}}
-\if{latex}{\out{\hypertarget{method-get_node}{}}}
+\if{html}{\out{<a id="method-Network_Graph-get_node"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Graph-get_node}{}}}
 \subsection{Method \code{get_node()}}{
 Get the node's visnetwork description
 \subsection{Usage}{
@@ -89,8 +89,8 @@ set_node_color
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_node_color"></a>}}
-\if{latex}{\out{\hypertarget{method-set_node_color}{}}}
+\if{html}{\out{<a id="method-Network_Graph-set_node_color"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Graph-set_node_color}{}}}
 \subsection{Method \code{set_node_color()}}{
 Set the node's color
 \subsection{Usage}{
@@ -109,8 +109,8 @@ set_node_color}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_node_shape"></a>}}
-\if{latex}{\out{\hypertarget{method-set_node_shape}{}}}
+\if{html}{\out{<a id="method-Network_Graph-set_node_shape"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Graph-set_node_shape}{}}}
 \subsection{Method \code{set_node_shape()}}{
 Set the node's shape
 \subsection{Usage}{
@@ -129,8 +129,8 @@ set_node_border}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_node_border"></a>}}
-\if{latex}{\out{\hypertarget{method-set_node_border}{}}}
+\if{html}{\out{<a id="method-Network_Graph-set_node_border"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Graph-set_node_border}{}}}
 \subsection{Method \code{set_node_border()}}{
 Set the node's border color
 \subsection{Usage}{
@@ -149,8 +149,8 @@ set_node_label}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_node_label"></a>}}
-\if{latex}{\out{\hypertarget{method-set_node_label}{}}}
+\if{html}{\out{<a id="method-Network_Graph-set_node_label"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Graph-set_node_label}{}}}
 \subsection{Method \code{set_node_label()}}{
 Set the node's label
 \subsection{Usage}{
@@ -169,8 +169,8 @@ is_empty}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-is_empty"></a>}}
-\if{latex}{\out{\hypertarget{method-is_empty}{}}}
+\if{html}{\out{<a id="method-Network_Graph-is_empty"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Graph-is_empty}{}}}
 \subsection{Method \code{is_empty()}}{
 Check whether the node and edge tables are empty
 \subsection{Usage}{
@@ -183,8 +183,8 @@ build_graph
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-build_graph"></a>}}
-\if{latex}{\out{\hypertarget{method-build_graph}{}}}
+\if{html}{\out{<a id="method-Network_Graph-build_graph"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Graph-build_graph}{}}}
 \subsection{Method \code{build_graph()}}{
 Create a node and edge table that describe the graph of the network
 \subsection{Usage}{
@@ -206,8 +206,8 @@ Create a node and edge table that describe the graph of the network
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Network_Graph-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Graph-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

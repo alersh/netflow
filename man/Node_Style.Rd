@@ -37,24 +37,24 @@ Specifies the appearance of the nodes
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Node_Style$new()}}
-\item \href{#method-invalidate}{\code{Node_Style$invalidate()}}
-\item \href{#method-set_status}{\code{Node_Style$set_status()}}
-\item \href{#method-render}{\code{Node_Style$render()}}
-\item \href{#method-clone}{\code{Node_Style$clone()}}
+\item \href{#method-Node_Style-new}{\code{Node_Style$new()}}
+\item \href{#method-Node_Style-invalidate}{\code{Node_Style$invalidate()}}
+\item \href{#method-Node_Style-set_status}{\code{Node_Style$set_status()}}
+\item \href{#method-Node_Style-render}{\code{Node_Style$render()}}
+\item \href{#method-Node_Style-clone}{\code{Node_Style$clone()}}
 }
 }
-\if{html}{
-\out{<details open ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize">}\href{../../ModelPath/html/Serializable.html#method-serialize}{\code{ModelPath::Serializable$serialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize">}\href{../../ModelPath/html/Serializable.html#method-unserialize}{\code{ModelPath::Serializable$unserialize()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-serialize'><code>ModelPath::Serializable$serialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-unserialize'><code>ModelPath::Serializable$unserialize()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Node_Style-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Node_Style-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new Node_Style object with a node label
 \subsection{Usage}{
@@ -76,8 +76,8 @@ invalidate
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-invalidate"></a>}}
-\if{latex}{\out{\hypertarget{method-invalidate}{}}}
+\if{html}{\out{<a id="method-Node_Style-invalidate"></a>}}
+\if{latex}{\out{\hypertarget{method-Node_Style-invalidate}{}}}
 \subsection{Method \code{invalidate()}}{
 Set the invalid shape of the node
 set_status
@@ -87,8 +87,8 @@ set_status
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_status"></a>}}
-\if{latex}{\out{\hypertarget{method-set_status}{}}}
+\if{html}{\out{<a id="method-Node_Style-set_status"></a>}}
+\if{latex}{\out{\hypertarget{method-Node_Style-set_status}{}}}
 \subsection{Method \code{set_status()}}{
 Set the status color of the node.
 \subsection{Usage}{
@@ -108,8 +108,8 @@ render}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-render"></a>}}
-\if{latex}{\out{\hypertarget{method-render}{}}}
+\if{html}{\out{<a id="method-Node_Style-render"></a>}}
+\if{latex}{\out{\hypertarget{method-Node_Style-render}{}}}
 \subsection{Method \code{render()}}{
 Render the nodes of a network
 \subsection{Usage}{
@@ -130,8 +130,8 @@ A data frame
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Node_Style-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Node_Style-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

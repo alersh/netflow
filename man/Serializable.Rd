@@ -12,14 +12,14 @@ A Serializable contains methods that serialize the objects and restore the byte 
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-serialize}{\code{Serializable$serialize()}}
-\item \href{#method-unserialize}{\code{Serializable$unserialize()}}
-\item \href{#method-clone}{\code{Serializable$clone()}}
+\item \href{#method-Serializable-serialize}{\code{Serializable$serialize()}}
+\item \href{#method-Serializable-unserialize}{\code{Serializable$unserialize()}}
+\item \href{#method-Serializable-clone}{\code{Serializable$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-serialize"></a>}}
-\if{latex}{\out{\hypertarget{method-serialize}{}}}
+\if{html}{\out{<a id="method-Serializable-serialize"></a>}}
+\if{latex}{\out{\hypertarget{method-Serializable-serialize}{}}}
 \subsection{Method \code{serialize()}}{
 Serialize this object. Only the data fields are serialized.
 \subsection{Usage}{
@@ -32,8 +32,8 @@ unserialize
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-unserialize"></a>}}
-\if{latex}{\out{\hypertarget{method-unserialize}{}}}
+\if{html}{\out{<a id="method-Serializable-unserialize"></a>}}
+\if{latex}{\out{\hypertarget{method-Serializable-unserialize}{}}}
 \subsection{Method \code{unserialize()}}{
 Unserialize the raw data and restore the data fields.
 \subsection{Usage}{
@@ -49,8 +49,8 @@ Unserialize the raw data and restore the data fields.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Serializable-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Serializable-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

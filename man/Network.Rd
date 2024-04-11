@@ -37,49 +37,54 @@ u<-network_new() \%>\%
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{Network$new()}}
-\item \href{#method-reset}{\code{Network$reset()}}
-\item \href{#method-clear_outputs}{\code{Network$clear_outputs()}}
-\item \href{#method-add_edge}{\code{Network$add_edge()}}
-\item \href{#method-remove_edge}{\code{Network$remove_edge()}}
-\item \href{#method-lock_all_nodes}{\code{Network$lock_all_nodes()}}
-\item \href{#method-add_node}{\code{Network$add_node()}}
-\item \href{#method-add_nodes}{\code{Network$add_nodes()}}
-\item \href{#method-remove_node}{\code{Network$remove_node()}}
-\item \href{#method-build}{\code{Network$build()}}
-\item \href{#method-build_graph}{\code{Network$build_graph()}}
-\item \href{#method-set_node_validity}{\code{Network$set_node_validity()}}
-\item \href{#method-run}{\code{Network$run()}}
-\item \href{#method-plot}{\code{Network$plot()}}
-\item \href{#method-summary}{\code{Network$summary()}}
-\item \href{#method-get_locked_nodes}{\code{Network$get_locked_nodes()}}
-\item \href{#method-clone}{\code{Network$clone()}}
+\item \href{#method-Network-new}{\code{Network$new()}}
+\item \href{#method-Network-ns}{\code{Network$ns()}}
+\item \href{#method-Network-reset}{\code{Network$reset()}}
+\item \href{#method-Network-clear_outputs}{\code{Network$clear_outputs()}}
+\item \href{#method-Network-add_edge}{\code{Network$add_edge()}}
+\item \href{#method-Network-remove_edge}{\code{Network$remove_edge()}}
+\item \href{#method-Network-lock_all_nodes}{\code{Network$lock_all_nodes()}}
+\item \href{#method-Network-add_node}{\code{Network$add_node()}}
+\item \href{#method-Network-add_nodes}{\code{Network$add_nodes()}}
+\item \href{#method-Network-remove_node}{\code{Network$remove_node()}}
+\item \href{#method-Network-build}{\code{Network$build()}}
+\item \href{#method-Network-build_graph}{\code{Network$build_graph()}}
+\item \href{#method-Network-set_node_validity}{\code{Network$set_node_validity()}}
+\item \href{#method-Network-run}{\code{Network$run()}}
+\item \href{#method-Network-plot}{\code{Network$plot()}}
+\item \href{#method-Network-summary}{\code{Network$summary()}}
+\item \href{#method-Network-get_locked_nodes}{\code{Network$get_locked_nodes()}}
+\item \href{#method-Network-clone}{\code{Network$clone()}}
 }
 }
-\if{html}{
-\out{<details ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize">}\href{../../ModelPath/html/Serializable.html#method-serialize}{\code{ModelPath::Serializable$serialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize">}\href{../../ModelPath/html/Serializable.html#method-unserialize}{\code{ModelPath::Serializable$unserialize()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="call">}\href{../../ModelPath/html/Node.html#method-call}{\code{ModelPath::Node$call()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="is_locked">}\href{../../ModelPath/html/Node.html#method-is_locked}{\code{ModelPath::Node$is_locked()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="lock_to_string">}\href{../../ModelPath/html/Node.html#method-lock_to_string}{\code{ModelPath::Node$lock_to_string()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="reset_status">}\href{../../ModelPath/html/Node.html#method-reset_status}{\code{ModelPath::Node$reset_status()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="server">}\href{../../ModelPath/html/Node.html#method-server}{\code{ModelPath::Node$server()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_lock">}\href{../../ModelPath/html/Node.html#method-set_lock}{\code{ModelPath::Node$set_lock()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status">}\href{../../ModelPath/html/Node.html#method-set_status}{\code{ModelPath::Node$set_status()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_ui_editable">}\href{../../ModelPath/html/Node.html#method-set_ui_editable}{\code{ModelPath::Node$set_ui_editable()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_fail">}\href{../../ModelPath/html/Node.html#method-status_fail}{\code{ModelPath::Node$status_fail()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_idle">}\href{../../ModelPath/html/Node.html#method-status_idle}{\code{ModelPath::Node$status_idle()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_running">}\href{../../ModelPath/html/Node.html#method-status_running}{\code{ModelPath::Node$status_running()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_succeed">}\href{../../ModelPath/html/Node.html#method-status_succeed}{\code{ModelPath::Node$status_succeed()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="ui">}\href{../../ModelPath/html/Node.html#method-ui}{\code{ModelPath::Node$ui()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="serialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-serialize'><code>ModelPath::Serializable$serialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Serializable" data-id="unserialize"><a href='../../ModelPath/html/Serializable.html#method-Serializable-unserialize'><code>ModelPath::Serializable$unserialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="call"><a href='../../ModelPath/html/Node.html#method-Node-call'><code>ModelPath::Node$call()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="is_locked"><a href='../../ModelPath/html/Node.html#method-Node-is_locked'><code>ModelPath::Node$is_locked()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="lock_to_string"><a href='../../ModelPath/html/Node.html#method-Node-lock_to_string'><code>ModelPath::Node$lock_to_string()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="reset_status"><a href='../../ModelPath/html/Node.html#method-Node-reset_status'><code>ModelPath::Node$reset_status()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="server"><a href='../../ModelPath/html/Node.html#method-Node-server'><code>ModelPath::Node$server()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_lock"><a href='../../ModelPath/html/Node.html#method-Node-set_lock'><code>ModelPath::Node$set_lock()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status"><a href='../../ModelPath/html/Node.html#method-Node-set_status'><code>ModelPath::Node$set_status()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_fail"><a href='../../ModelPath/html/Node.html#method-Node-set_status_fail'><code>ModelPath::Node$set_status_fail()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_idle"><a href='../../ModelPath/html/Node.html#method-Node-set_status_idle'><code>ModelPath::Node$set_status_idle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_running"><a href='../../ModelPath/html/Node.html#method-Node-set_status_running'><code>ModelPath::Node$set_status_running()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_status_succeed"><a href='../../ModelPath/html/Node.html#method-Node-set_status_succeed'><code>ModelPath::Node$set_status_succeed()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="set_ui_editable"><a href='../../ModelPath/html/Node.html#method-Node-set_ui_editable'><code>ModelPath::Node$set_ui_editable()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_fail"><a href='../../ModelPath/html/Node.html#method-Node-status_fail'><code>ModelPath::Node$status_fail()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_idle"><a href='../../ModelPath/html/Node.html#method-Node-status_idle'><code>ModelPath::Node$status_idle()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_running"><a href='../../ModelPath/html/Node.html#method-Node-status_running'><code>ModelPath::Node$status_running()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="status_succeed"><a href='../../ModelPath/html/Node.html#method-Node-status_succeed'><code>ModelPath::Node$status_succeed()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="ModelPath" data-topic="Node" data-id="ui"><a href='../../ModelPath/html/Node.html#method-Node-ui'><code>ModelPath::Node$ui()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-Network-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new network
 \subsection{Usage}{
@@ -115,8 +120,28 @@ A Network object
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-reset"></a>}}
-\if{latex}{\out{\hypertarget{method-reset}{}}}
+\if{html}{\out{<a id="method-Network-ns"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-ns}{}}}
+\subsection{Method \code{ns()}}{
+Get the network namespaced node id
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Network$ns(node_id)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{node_id}}{The id of the node}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+The namespaced id
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Network-reset"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-reset}{}}}
 \subsection{Method \code{reset()}}{
 Reset the network by clearing all the outputs of all the
 unlocked nodes. Locked nodes are not reset.
@@ -129,8 +154,8 @@ network
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clear_outputs"></a>}}
-\if{latex}{\out{\hypertarget{method-clear_outputs}{}}}
+\if{html}{\out{<a id="method-Network-clear_outputs"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-clear_outputs}{}}}
 \subsection{Method \code{clear_outputs()}}{
 Clears the outputs of all unlocked nodes
 \subsection{Usage}{
@@ -139,8 +164,8 @@ Clears the outputs of all unlocked nodes
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-add_edge"></a>}}
-\if{latex}{\out{\hypertarget{method-add_edge}{}}}
+\if{html}{\out{<a id="method-Network-add_edge"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-add_edge}{}}}
 \subsection{Method \code{add_edge()}}{
 Create an edge between two nodes
 \subsection{Usage}{
@@ -171,8 +196,8 @@ u<-network_new() \%>\%
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-remove_edge"></a>}}
-\if{latex}{\out{\hypertarget{method-remove_edge}{}}}
+\if{html}{\out{<a id="method-Network-remove_edge"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-remove_edge}{}}}
 \subsection{Method \code{remove_edge()}}{
 Remove an edge
 \subsection{Usage}{
@@ -191,8 +216,8 @@ edge between the two nodes can be rejoined using the function edge_restore}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-lock_all_nodes"></a>}}
-\if{latex}{\out{\hypertarget{method-lock_all_nodes}{}}}
+\if{html}{\out{<a id="method-Network-lock_all_nodes"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-lock_all_nodes}{}}}
 \subsection{Method \code{lock_all_nodes()}}{
 Lock all the nodes in the network
 \subsection{Usage}{
@@ -208,8 +233,8 @@ Lock all the nodes in the network
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-add_node"></a>}}
-\if{latex}{\out{\hypertarget{method-add_node}{}}}
+\if{html}{\out{<a id="method-Network-add_node"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-add_node}{}}}
 \subsection{Method \code{add_node()}}{
 Add a node to the network
 \subsection{Usage}{
@@ -225,8 +250,8 @@ Add a node to the network
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-add_nodes"></a>}}
-\if{latex}{\out{\hypertarget{method-add_nodes}{}}}
+\if{html}{\out{<a id="method-Network-add_nodes"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-add_nodes}{}}}
 \subsection{Method \code{add_nodes()}}{
 Add a node to the network
 \subsection{Usage}{
@@ -242,8 +267,8 @@ Add a node to the network
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-remove_node"></a>}}
-\if{latex}{\out{\hypertarget{method-remove_node}{}}}
+\if{html}{\out{<a id="method-Network-remove_node"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-remove_node}{}}}
 \subsection{Method \code{remove_node()}}{
 Remove a node from the network
 \subsection{Usage}{
@@ -259,8 +284,8 @@ Remove a node from the network
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-build"></a>}}
-\if{latex}{\out{\hypertarget{method-build}{}}}
+\if{html}{\out{<a id="method-Network-build"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-build}{}}}
 \subsection{Method \code{build()}}{
 Build the configuration of the network for display.
 \subsection{Usage}{
@@ -269,8 +294,8 @@ Build the configuration of the network for display.
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-build_graph"></a>}}
-\if{latex}{\out{\hypertarget{method-build_graph}{}}}
+\if{html}{\out{<a id="method-Network-build_graph"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-build_graph}{}}}
 \subsection{Method \code{build_graph()}}{
 Build the network graph that will be displayed
 \subsection{Usage}{
@@ -279,8 +304,8 @@ Build the network graph that will be displayed
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_node_validity"></a>}}
-\if{latex}{\out{\hypertarget{method-set_node_validity}{}}}
+\if{html}{\out{<a id="method-Network-set_node_validity"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-set_node_validity}{}}}
 \subsection{Method \code{set_node_validity()}}{
 A convenient method that sets the validity of the nodes
 in the network. A node is valid if it has a function. Nodes that are valid
@@ -292,8 +317,8 @@ will also be performed as a side effect.
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-run"></a>}}
-\if{latex}{\out{\hypertarget{method-run}{}}}
+\if{html}{\out{<a id="method-Network-run"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-run}{}}}
 \subsection{Method \code{run()}}{
 Run the network by executing all the node operations sequentially
 \subsection{Usage}{
@@ -310,8 +335,8 @@ only the node of the node_id will be run.}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-plot"></a>}}
-\if{latex}{\out{\hypertarget{method-plot}{}}}
+\if{html}{\out{<a id="method-Network-plot"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-plot}{}}}
 \subsection{Method \code{plot()}}{
 Display the network graphically
 \subsection{Usage}{
@@ -320,8 +345,8 @@ Display the network graphically
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-summary"></a>}}
-\if{latex}{\out{\hypertarget{method-summary}{}}}
+\if{html}{\out{<a id="method-Network-summary"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-summary}{}}}
 \subsection{Method \code{summary()}}{
 summarize the network
 \subsection{Usage}{
@@ -333,8 +358,8 @@ the summary of the network object
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_locked_nodes"></a>}}
-\if{latex}{\out{\hypertarget{method-get_locked_nodes}{}}}
+\if{html}{\out{<a id="method-Network-get_locked_nodes"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-get_locked_nodes}{}}}
 \subsection{Method \code{get_locked_nodes()}}{
 Get all the locked nodes
 \subsection{Usage}{
@@ -346,8 +371,8 @@ A vector of locked node ids
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-Network-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
