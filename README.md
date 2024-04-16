@@ -54,7 +54,7 @@ the step ids previously assigned to the operations.
 
 ![](img/branch_summary.png)
 
-Double click a node and another window is popped up.
+Double click a node and a separate window pops up.
 
 ![](img/node_window.png)
 

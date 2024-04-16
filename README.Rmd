@@ -50,7 +50,7 @@ A pop up window is opened which shows the branch_summary visually, with the node
 
 ![](img/branch_summary.png)
 
-Double click a node and another window is popped up. 
+Double click a node and a separate window pops up. 
 
 ![](img/node_window.png)
 
