@@ -151,6 +151,6 @@ More complex pipelines can be created. Furthermore, separate networks
 can be built and combined and reused in different ways.
 
 This package is still under development. A number of functionalities are
-being planned or or being implemented, including saving and loading
+being planned or being implemented, including saving and loading
 networks, parallel processing, and better user interface just to name a
 few.
