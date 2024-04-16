@@ -71,7 +71,7 @@ shinyFlowUI <- function(id){
 
     )
   )
-} # modelFlowUI
+}
 
 #' @title shinyFlowServer
 #' @description The call module of shinyFlowUI. Use callModule to call this function
@@ -302,7 +302,7 @@ shinyFlowServer <- function(input, output, session, network,
 
 
 
-
+# TODO
 runParallelNetwork <- function(node_id){
 
   if (!missing(node_id)){

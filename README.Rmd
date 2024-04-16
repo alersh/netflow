@@ -80,6 +80,41 @@ This branch takes the same iris data, selects the two columns Sepal.Length and P
 
 ![](img/branch_summary_linreg.png)
 
+Branches can also be joined together. In this example, two branches are created and then joined together by dplyr::inner_join. The branch branch_filter takes the iris data, removes the column Petal.Width, and retains all entries with Petal.Length > 5. The branch branch_Species_recoded takes the iris data and creates a new column with the function getSpeciesCode. This new column contains the numeric codes for the distinct species in the column Species. The resulting new table is joined with the output table from branch_filter.
+
+```{r join_branches}
+getSpeciesCode <- function(x){
+  species <- unique(x$Species)
+  return (as.data.frame(list(Species = species, Species_code = seq(species))))
+}
+
+branch_filter <- parse_expr(quote(  
+  getIris() %>%
+    dplyr::select(-Petal.Width) %>%
+    dplyr::filter(Petal.Length > 5) %>%
+    dplyr::inner_join(x = ., by = "Species")
+), step_ids = c("Read_data", "Select_columns", "Filter", "Inner_join"))
+
+branch_Species_recoded <- parse_expr(quote(
+  getIris() %>%
+    getSpeciesCode() %>%
+    dplyr::inner_join(y = .)
+), step_ids = c("Read_data", "Species_code", "Inner_join"))
+
+net <- Network$new("Species")$
+              build_branch(branch_filter)$
+              build_branch(branch_Species_recoded)
+
+flow <- Netflow$new(id = "Iris")$
+  add_network(net)
+
+flow$net_flow()
+```
+
+In branch_filter, the dplyr::inner_join function uses the first argument x as the input argument for the filtered data, and specifies that the column "Species" as the column to join by. In branch_Species_recoded, it specifies y as the input argument. The step id "Inner_join" is used for both inner_join statements in both branches. Below shows the rendering of this network.
+
+![](img/branches_join.png)
+
 More complex pipelines can be created. Furthermore, separate networks can be built and combined and reused in different ways.
 
 This package is still under development. A number of functionalities are being planned or or being implemented, including saving and loading networks, parallel processing, and better user interface just to name a few. 
