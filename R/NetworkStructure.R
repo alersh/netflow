@@ -216,13 +216,13 @@ Network_Structure <- R6::R6Class("Network_Structure",
                                       # attach all branches together through their common nodes
                                       nodes <- unique(c(df$from, df$to))
                                       levels <- data.frame(id = nodes, level = rep(NA, length(nodes)), stringsAsFactors = F)
-
                                       reference <- branches[[1]]
                                       visited <- rep(F, length(branches))
                                       levels[which(levels$id %in% reference), 'level'] <- seq(1, length(reference))
                                       visited[1] <- T
 
                                       for (i in seq_along(branches)){
+
                                         if(visited[i]){
                                           found <- NULL
                                           refIdx <- i
@@ -239,7 +239,9 @@ Network_Structure <- R6::R6Class("Network_Structure",
                                             # for each node in this reference branch, get the other branch with the same node
                                             # and then set the levels for that branch
                                             for (k in found){
-                                              idx <- which(branches[[k]] %in% reference)
+                                              # We can have more than one node (one that branches out and one that merges two or more branches together).
+                                              # We should just take the first index only since it's the first one that branches out.
+                                              idx <- which(branches[[k]] %in% reference)[1]
                                               l <- filter(levels, id == branches[[k]][idx])$level
                                               s <- l - idx
                                               # set levels of all nodes in the branch based on this node level
@@ -263,7 +265,9 @@ Network_Structure <- R6::R6Class("Network_Structure",
                                           if (!is.null(found)){
                                             for (k in found){
                                               reference <- branches[[k]]
-                                              idx <- which(branches[[i]] %in% reference)
+                                              # we always assume the first node is the one that branches out. We ignore all the
+                                              # nodes that merge two or more branches together.
+                                              idx <- which(branches[[i]] %in% reference)[1]
                                               l <- filter(levels, id == branches[[i]][idx])$level
                                               s <- l - idx
                                               # set levels of all nodes in the branch based on this node level
