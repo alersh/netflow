@@ -50,6 +50,7 @@ u<-network_new() \%>\%
 \item \href{#method-Network-build}{\code{Network$build()}}
 \item \href{#method-Network-build_graph}{\code{Network$build_graph()}}
 \item \href{#method-Network-set_node_validity}{\code{Network$set_node_validity()}}
+\item \href{#method-Network-build_branch}{\code{Network$build_branch()}}
 \item \href{#method-Network-run}{\code{Network$run()}}
 \item \href{#method-Network-plot}{\code{Network$plot()}}
 \item \href{#method-Network-summary}{\code{Network$summary()}}
@@ -311,10 +312,28 @@ A convenient method that sets the validity of the nodes
 in the network. A node is valid if it has a function. Nodes that are valid
 will not be locked, whereas nodes that are invalid will be locked. Locking
 will also be performed as a side effect.
+Build a branch of the network using the parsed expression.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Network$set_node_validity()}\if{html}{\out{</div>}}
 }
 
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Network-build_branch"></a>}}
+\if{latex}{\out{\hypertarget{method-Network-build_branch}{}}}
+\subsection{Method \code{build_branch()}}{
+Build a branck of the network using the parsed expression.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Network$build_branch(parsed_expr)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{parsed_expr}}{The parsed expression}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-Network-run"></a>}}
