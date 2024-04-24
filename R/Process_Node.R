@@ -69,8 +69,10 @@ Process_Node <- R6::R6Class("Process_Node",
                                 }
                                 else{
                                   # save output
-                                  status <- tryCatch(
-                                    saveOutput(self$output, self$id),
+                                  status <- tryCatch({
+                                    saveOutput(self$output, self$id)
+                                    self$set_output_filename()
+                                    },
                                     error = function(e) e
                                   )
                                   if (inherits(status, "error")){
@@ -141,6 +143,11 @@ Process_Node <- R6::R6Class("Process_Node",
                                 super$set_ui_editable(status, description)
                                 private$.ui_editable$fun <- fun
                                 invisible(self)
+                              },
+                              #' set_output_filename
+                              #' @description Store the name of the output file
+                              set_output_filename = function(){
+                                private$.outputFile <- self$id
                               }
                             ),
                             active = list(
@@ -222,19 +229,20 @@ Process_Node <- R6::R6Class("Process_Node",
                               .output = NULL,
                               # @field .visualization It holds the code (characters) that creates the custom visualization
                               .visualization = NULL,
+                              # @field .outputFile It stores the filename of the output
+                              .outputFile = NULL,
 
                               extract = function(){
                                 values <- super$extract()
-                                values <- append(
+                                values <- append(values,
                                   list(fn = private$objExtract(private$.fn),
                                        input_ids = private$objExtract(private$.input_ids),
-                                       to_node = private$objExtract(private$.to_nodes),
+                                       to_node = private$objExtract(private$.to_node),
                                        to_node_arg = private$objExtract(private$.to_node_arg),
-                                       output = private$.output,
+                                       outputFile = private$.outputFile,
                                        visualization = private$.visualization
                                   )
                                 )
-
                               },
 
                               restore = function(values){
@@ -243,9 +251,10 @@ Process_Node <- R6::R6Class("Process_Node",
                                 private$.input_ids <- private$objRestore(values$input_ids)
                                 private$.to_node <- private$objRestore(values$to_node)
                                 private$.to_node_arg <- private$objRestore(values$to_node_arg)
-                                private$.output <- values$output
+                                private$.outputFile <- values$outputFile
                                 private$.visualization <- values$visualization
 
+                                private$.output <- readOutput(private$.outputFile)
                               }
                             )
 )
