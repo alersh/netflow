@@ -158,6 +158,7 @@ Edge <- R6::R6Class("Edge",
 
                       restore = function(values){
                         private$.connected = values$connected
+                        private$.representation <- values$representation
                         private$.from_node = values$from_node
                         private$.to_node = values$to_node
                         private$.to_node_arg = values$to_node_arg
