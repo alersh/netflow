@@ -105,11 +105,18 @@ nodeFunctionUI <- function(ns){
 #' @param ns The namespace of the visNetwork
 nodeOutputTableUI <- function(ns){
   tabPanel('Output Table', value = "OutputTable",
-           column(12,
+           column(3,
                   br(),
                   selectInput(ns("OutputFormat"), "Format", choices = list("Summary", "Data Frame", "Array"),
                               width = 200)
            ),
+           column(3,
+                  br(),
+                  conditionalPanel(condition = "input.OutputFormat != 'Summary'",
+                    selectInput(ns("NumPoints"), "Number of Data Points", choices = list("default (100)" = "default", "all" = "all"), width = 200),
+                    ns = ns)
+                  ),
+           column(6),
            column(12,
                   br(),
                   verbatimTextOutput(ns("OutputSummary")),

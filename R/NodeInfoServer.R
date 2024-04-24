@@ -249,22 +249,14 @@ nodeOutputTableServer <- function(input, output, session, node){
     shiny::validate(
       shiny::need(is.data.frame(out), message = "Output is not a data frame.")
     )
-    out
-  })
-  output$OutputTable <- shiny::renderTable({
 
-    shiny::validate(
-      shiny::need(input$OutputFormat == "Array", message = F)
-    )
-    out <- node$output
+    points <- input$NumPoints
+    if (points == "all") points <- nrow(out)
+    else if (points == "default") points <- 100
+    if (points > nrow(out)) points <- nrow(out)
 
-    shiny::validate(
-      shiny::need(!is.null(out), message = "No Output is Available.")
-    )
-    shiny::validate(
-      shiny::need(is.array(out) || is.matrix(out), message = "Output is neither an array nor a matrix.")
-    )
-    out
+    out[1:points,]
+
   })
   output$OutputSummary <- shiny::renderPrint({
 
