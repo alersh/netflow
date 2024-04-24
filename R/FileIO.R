@@ -153,7 +153,7 @@ readOutput <- function(filename = NULL, repo = c("local")){
     if (is.null(filename))
       stop("Cannot read output file because of missing filename.")
     else
-      return (readRDS(filename))
+      return (readRDS(file.path("data", filename)))
   }
 }
 
