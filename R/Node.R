@@ -268,7 +268,7 @@ Node <- R6::R6Class("Node",
                                        lock = private$.lock,
                                        errormsg = private$.errormsg,
                                        warningmsg = private$.warningmsg,
-                                       style = private$.style,
+                                       style = private$objExtract(private$.style),
                                        ui_editable = private$.ui_editable)
 
                       },
@@ -282,7 +282,7 @@ Node <- R6::R6Class("Node",
                         private$.lock <- values$lock
                         private$.errormsg <- values$errormsg
                         private$.warningmsg <- values$warningmsg
-                        private$.style <- values$style
+                        private$.style <- private$objRestore(values$style)
                         private$.ui_editable <- values$ui_editable
 
                       }
