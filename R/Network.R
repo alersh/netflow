@@ -226,7 +226,6 @@ Network <- R6::R6Class("Network",
                          #' Build a branch of the network using the parsed expression.
                          #' @description Build a branck of the network using the parsed expression.
                          #' @param parsed_expr The parsed expression
-                         #' @export
                          build_branch = function(parsed_expr){
 
                            # add nodes
@@ -419,8 +418,9 @@ Network <- R6::R6Class("Network",
 
                          extract = function(){
                            values <- super$extract()
-                           values <- append(
-                             list(nodes = private$.nodes,
+
+                           values <- append(values,
+                             list(nodes = private$objExtract(private$.nodes),
                                   sources = private$.sources,
                                   interrupt = private$.interrupt,
                                   structure = private$objExtract(private$.structure),
@@ -432,7 +432,7 @@ Network <- R6::R6Class("Network",
 
                          restore = function(values){
                            super$restore(values)
-                           private$.nodes <- values$nodes
+                           private$.nodes <- private$objRestore(values$nodes)
                            private$.sources <- values$sources
                            private$.interrupt <- values$interrupt
                            private$.structure <- private$objRestore(values$structure)
