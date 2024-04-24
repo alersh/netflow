@@ -34,9 +34,9 @@ Serializable <- R6::R6Class("Serializable",
                               },
 
                               # extract: An interface required to be implemented by the user
-                              extract = function(){ stop("The 'extract' method must be implemented by the user.") },
+                              extract = function(){ NULL },
                               # restore: An interface required to be implemented by the user
-                              restore = function(values){ stop("The 'restore' method must be implemented by the user.") },
+                              restore = function(values){ NULL },
 
                               # objExtract: Extract the data from the R6 object obj
                               objExtract = function(obj){
@@ -73,6 +73,7 @@ Serializable <- R6::R6Class("Serializable",
                               },
 
                               .unserialize = function(conn){
+                                obj <- NULL
                                 values <- unserialize(conn,
                                                       refhook = function(obj){
                                                         private$restore(eval(parse(text = obj)))
