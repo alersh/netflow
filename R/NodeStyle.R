@@ -140,7 +140,7 @@ Node_Style <- R6::R6Class("Node_Style",
 
                              restore = function(values){
                                self$label <- values$label
-                               private$.status_color <- pvalues$status_color
+                               private$.status_color <- values$status_color
                                private$.lock_shape <- values$lock_shape
                                private$.border_width <- values$border_width
                                private$.type <- values$type
