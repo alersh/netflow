@@ -239,7 +239,7 @@ Netflow <- R6::R6Class("Netflow",
 
                          extract = function(){
                            values <- super$extract()
-                           values <- append(
+                           values <- append(values,
                              list(network_ids = private$.network_ids)
                            )
 
