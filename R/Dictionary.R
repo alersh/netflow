@@ -214,17 +214,37 @@ Dictionary <- R6::R6Class("Dictionary",
                             .read_only = FALSE,
 
                             extract = function(){
-                              values <- list(items = private$.items,
-                                     length = private$.length,
-                                     check_value_fn = private$.check_value_fn,
-                                     check_key_fn = private$.check_key_fn,
-                                     read_only = private$.read_only
+                              items_extract <- list()
+                              obj_type <- list()
+                              for (n in names(private$.items)){
+                                if (inherits(private$.items[[n]], "R6")){
+                                  items_extract[[n]] <- private$objExtract(private$.items[[n]])
+                                  obj_type[[n]] <- "R6"
+                                }
+                                else{
+                                  items_extract[[n]] <- private$.items[[n]]
+                                  obj_type[[n]] <- typeof(private$.items[[n]])
+                                }
+                              }
+                              values <- list(items = items_extract,
+                                             items_type = obj_type,
+                                             length = private$.length,
+                                             check_value_fn = private$.check_value_fn,
+                                             check_key_fn = private$.check_key_fn,
+                                             read_only = private$.read_only
                               )
 
                             },
 
                             restore = function(values){
-                              private$.items <- values$items
+                              items_restore <- list()
+                              for (n in names(values$items)){
+                                if (values$items_type[[n]] == "R6")
+                                  items_restore[[n]] <- private$objRestore(values$items[[n]])
+                                else
+                                  items_restore[[n]] <- values$items[[n]]
+                              }
+                              private$.items <- items_restore
                               private$.length <- values$length
                               private$.check_value_fn <- values$check_value_fn
                               private$.check_key_fn <- values$check_key_fn
@@ -239,6 +259,7 @@ Dictionary <- R6::R6Class("Dictionary",
 #' @description Check if the object belongs to the class Dictionary.
 #' @param obj The object to be checked
 #' @return Logical
+#' @export
 is_Dictionary <- function(obj){
   return (inherits(obj, "Dictionary"))
 }
