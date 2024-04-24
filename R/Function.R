@@ -252,10 +252,26 @@ Function <- R6::R6Class("Function",
                             },
 
                             extract = function(){
+                              # extract non-empty options
+                              options <- list()
+                              for (o in names(private$.options)){
+                                if (!is.symbol(private$.options[[o]])){
+                                  options[[o]] <- private$.options[[o]]
+                                }
+                              }
+
+                              options_exclude <- NULL
+                              a <- arguments(private$.fn)
+                              if (length(a) > 0 && length(private$.options) > 0){
+                                idx <- !names(a) %in% names(private$.options)
+                                options_exclude <- names(a)[idx]
+                              }
+
                               values <- list(
                                 fn = private$.fn,
                                 args = private$.args,
-                                options = private$.options,
+                                options = options,
+                                exclusions = options_exclude,
                                 ns = private$.ns,
                                 data_types = private$.data_types
                               )
@@ -263,9 +279,14 @@ Function <- R6::R6Class("Function",
                             },
 
                             restore = function(values){
+
+                              options <- arguments(values$fn, exclude = values$exclusions)
+                              for (o in names(values$options)){
+                                options[[o]] <- values$options[[o]]
+                              }
                               private$.fn <- values$fn
                               private$.args <- values$args
-                              private$.options <- values$options
+                              private$.options <- options
                               private$.ns <- values$ns
                               private$.data_types <- values$data_types
 
