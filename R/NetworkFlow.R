@@ -31,10 +31,10 @@ gadgetFlow <- function(.network = NULL) {
   )
 
   server <- function(input, output, session) {
-    #rv <- reactiveValues(network = .network)
+
     observe({
       isolate({
-        callModule(module = shinyFlowServer, id = .network$id, network = .network)
+        shinyFlowServer(id = .network$id, network = .network)
       })
     })
 
