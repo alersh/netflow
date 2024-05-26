@@ -9,11 +9,19 @@
 nodeStatusServer <- function(input, output, session, node, editable = TRUE, ns){
   # status panel
   output$NodeStatusInfo <- shiny::renderText({
+    paste("Status:   ", toupper(node$status))
 
-    paste(paste("Status:   ", node$status, '<br><br>'),
-          paste("Error Message:   ", node$error_message, '<br><br>'),
-          paste("Warning Message:   ", node$warning_message, '<br><br>'))
   })
+
+  output$NodeStatusMessage <- shiny::renderUI({
+    if (node$error_message != "")
+      p(paste("Error:   ", node$error_message), style = "color:red")
+    else if (node$warning_message != "")
+      p(paste("Warning:   ", node$warning_message), style = "color:red")
+    else
+      ""
+  })
+
   observe({
 
     shiny::updateTextInput(session, "Label", value = node$style$label)
