@@ -48,9 +48,9 @@ flow <- Netflow$new(id = "Iris")$
 flow$net_flow()
 ```
 
-A pop up window is opened which shows the branch_summary visually, with
-the nodes representing each operation in the branch. The node labels are
-the step ids previously assigned to the operations.
+A pop up window appears and shows the branch_summary visually. The nodes
+represent the functions in the branch. The node labels are the step ids
+previously assigned to the functions.
 
 ![](img/branch_summary.png)
 
@@ -68,9 +68,10 @@ after the function is applied. The output can be a data frame, a matrix,
 an array, or a summary description. The output visualization plots the
 output data. The description tab explains the usage of this node.
 
-To run this network, click the Run button. If a node is successfully
-executed, it will turn green. A red colour indicates an error during the
-execution, while a yellow colour indicates the operation is being run.
+To run this network, click the Run button (green running man). If a node
+is successfully executed, it will turn green. A red colour indicates an
+error during the execution, while a yellow colour indicates the
+operation is being run.
 
 ![](img/branch_summary_run.png)
 
@@ -93,10 +94,10 @@ flow$net_flow()
 ```
 
 This branch takes the same iris data, selects the two columns
-Sepal.Length and Petal.Length, and runs the linear regression. Notice
-that the id node for the getIris is the same as the one in
-branch_summary because this branch will be built from the same node.
-Below shows the network with this new branch added to the network.
+Sepal.Length and Petal.Length, and runs the linear regression. Note that
+the id node used in the getIris function is the same as the one in the
+branch_summary branch because this branch will be built from the same
+node. Below shows the network with this new branch added to the network.
 
 ![](img/branch_summary_linreg.png)
 
@@ -150,7 +151,5 @@ of this network.
 More complex pipelines can be created. Furthermore, separate networks
 can be built and combined and reused in different ways.
 
-This package is still under development. A number of functionalities are
-being planned or being implemented, including saving and loading
-networks, parallel processing, and better user interface just to name a
-few.
+This package is still under development. More functionalities and
+improvements will be added.
