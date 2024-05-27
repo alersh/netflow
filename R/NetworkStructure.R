@@ -164,19 +164,21 @@ Network_Structure <- R6::R6Class("Network_Structure",
                                   # @return A data frame
                                   #' @importFrom dplyr arrange
                                   .build_path_sequence = function(links){
-                                    flag <- 1
-                                    while(flag > 0){
-                                      flag <- 0
-                                      maxvalue <- max(c(links$from, links$to))
-                                      for (i in 1:nrow(links)){
-                                        if (links$from[i] > links$to[i]){
-                                          maxvalue <- maxvalue + 1
-                                          links$to[i] <- maxvalue
-                                          idx <- which(links$from_id == links$to_id[i])
-                                          if (length(idx) > 0){
-                                            links$from[idx] <- maxvalue
+                                    if (nrow(links) > 0){
+                                      flag <- 1
+                                      while(flag > 0){
+                                        flag <- 0
+                                        maxvalue <- max(c(links$from, links$to))
+                                        for (i in 1:nrow(links)){
+                                          if (links$from[i] > links$to[i]){
+                                            maxvalue <- maxvalue + 1
+                                            links$to[i] <- maxvalue
+                                            idx <- which(links$from_id == links$to_id[i])
+                                            if (length(idx) > 0){
+                                              links$from[idx] <- maxvalue
+                                            }
+                                            flag <- flag + 1
                                           }
-                                          flag <- flag + 1
                                         }
                                       }
                                     }
