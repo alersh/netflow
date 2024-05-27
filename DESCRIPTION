@@ -18,6 +18,7 @@ Imports:
     visNetwork (>= 2.0.6),
     shiny (>= 1.2.0),
     htmltools (>= 0.4.0),
+    NestedMenu (>= 0.2.0),
     tidyverse (>= 0.6.1),
     ggplot2 (>= 2.2.1),
     plotly (>= 4.7.1),
