@@ -15,6 +15,7 @@ networkDisplay <- function(output, ns, network){
     visNetworkShow(network$structure$graph, network$structure$rankdir) %>%
       visOptions(selectedBy = "group") %>%
       visPhysics(enabled = F) %>%
+      addFontAwesome() %>%
       visInteraction(selectConnectedEdges = F) %>%
       visEvents(doubleClick = paste0("function(data){
                             Shiny.onInputChange('", ns('NodeInspectClick') , "', data.nodes[0]);
@@ -40,7 +41,7 @@ visNetworkShow <- function(graph, dir = "LR"){
 
   visNetwork(graph$node_table,
              graph$edge_table,
-             background = 'lightgrey') %>%
+             background = '#ECECE8') %>%
     visEdges(arrows = "to", length = 10, smooth = list(type = 'dynamic',
                                                        roundness = 1)) %>%
     visHierarchicalLayout(direction = dir, sortMethod = "directed")

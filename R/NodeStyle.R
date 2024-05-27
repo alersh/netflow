@@ -14,20 +14,35 @@ Node_Style <- R6::R6Class("Node_Style",
                              #' initialize
                              #' @description Create a new Node_Style object with a node label
                              #' @param label the label of the node to be displayed
+                             #' @param type the type of the node. Default is "regular". It can also be "process" and "database".
                              #' @param default Logical. If TRUE, then no data fields are initialized.
                              #' @return A new Node_Style object
-                             initialize = function(label = "", default = FALSE){
+                             initialize = function(label = "", type = c("regular", "process", "database"), default = FALSE){
+                               type <- match.arg(type)
                                if (!default){
-                                 private$.type <- 'regular'
-                                 private$.shape <- private$.lock_shape[['unlock']]
+                                 private$.type <- type
+                                 if (type == "regular")
+                                   private$.shape <- private$.lock_shape[['unlock']]
+                                 else{
+                                   private$.shape <- "icon"
+                                   private$.icon <- get_icon(type)
+                                 }
+                                 private$.current_status = "idle"
                                  private$.fillcolor <- private$.status_color[['idle']]
+                                 private$.icon_color <- private$.status_color[['idle']]
                                  self$label <- label
                                }
                              },
                              #' invalidate
                              #' @description Set the invalid shape of the node
                              invalidate = function(){
-                               private$.shape <- private$.lock_shape[['invalid']]
+                               if (private$.type == "regular")
+                                private$.shape <- private$.lock_shape[['invalid']]
+                               else{
+                                 private$.shape <- "icon"
+                                 private$.icon <- get_icon("invalid")
+                               }
+
                                invisible(self)
                              },
                              #' set_status
@@ -36,7 +51,9 @@ Node_Style <- R6::R6Class("Node_Style",
                              #' 'fail', and 'warning'
                              set_status = function(status = c("idle", "success", "running", "fail", "warning")){
                                status <- match.arg(status)
+                               private$.current_status <- status
                                private$.fillcolor <- private$.status_color[[status]]
+                               private$.icon_color <- private$.status_color[[status]]
                                invisible(self)
                              },
                              #' render
@@ -52,6 +69,8 @@ Node_Style <- R6::R6Class("Node_Style",
                                  color.background = self$status_color,
                                  color.border = "black",
                                  shape = self$shape,
+                                 icon = private$.icon,
+                                 icon.color = self$status_color,
                                  stringsAsFactors = FALSE
                                )
                                return (node_frame)
@@ -67,7 +86,7 @@ Node_Style <- R6::R6Class("Node_Style",
                                if (missing(type))
                                  return (private$.type)
                                if (type != "regular")
-                                stop("Type must be a regular.")
+                                stop("Type must be a regular")
                                private$.type <- type
                                invisible(self)
                              },
@@ -78,9 +97,19 @@ Node_Style <- R6::R6Class("Node_Style",
                                if (!is.logical(lock))
                                  stop("Argument must be a logical")
                                if (lock)
-                                 private$.shape <- private$.lock_shape[["lock"]]
+                                 if (private$.type == "regular")
+                                   private$.shape <- private$.lock_shape[["lock"]]
+                                 else {
+                                   private$.shape <- "icon"
+                                   private$.icon <- get_icon("lock")
+                                 }
                                else
-                                 private$.shape <- private$.lock_shape[["unlock"]]
+                                 if (private$.type == "regular")
+                                  private$.shape <- private$.lock_shape[["unlock"]]
+                                 else{
+                                   private$.shape <- "icon"
+                                   private$.icon <- get_icon(private$.type)
+                                 }
                                invisible(self)
                              },
                              #' @field group Set the group of the node.
@@ -96,15 +125,17 @@ Node_Style <- R6::R6Class("Node_Style",
                              },
                              #' @field status_color Get the node color related to the node's status.
                              status_color = function(){
-                               return (private$.fillcolor)
+                               return (private$.status_color[[private$.current_status]])
                              }
 
                            ),
                            private = list(
+                             # @field .current_status Stores the current status of the node
+                             .current_status = NA,
                              # @field .status_color A constant list of status colors.
-                             .status_color = list('idle' = 'white',
+                             .status_color = list('idle' = 'black',
                                                   'running' = 'gold',
-                                                  'success' = 'lightgreen',
+                                                  'success' = '#20CE30',
                                                   'fail' = 'tomato',
                                                   'warning' = 'lightblue'),
                              # @field .lock_shape A constant list of lock shape
@@ -114,6 +145,10 @@ Node_Style <- R6::R6Class("Node_Style",
                              # @field .border_width A constant list of border width
                              .border_width = list('normal' = 1,
                                                   'locked' = 2),
+                             # @field .icon stores the icon info
+                             .icon = NULL,
+                             # @field .icon_color stores the icon color
+                             .icon_color = NULL,
 
                              # @field .type
                              .type = 'regular',
@@ -131,6 +166,8 @@ Node_Style <- R6::R6Class("Node_Style",
                                               border_width = private$.border_width,
                                               type = private$.type,
                                               shape = private$.shape,
+                                              icon = private$.icon,
+                                              icon_color = private$.icon_color,
                                               fillcolor = private$.fillcolor,
                                               group = private$.group
 
@@ -147,6 +184,8 @@ Node_Style <- R6::R6Class("Node_Style",
                                private$.shape <- values$shape
                                private$.fillcolor <- values$fillcolor
                                private$.group <- values$group
+                               private$.icon <- values$icon
+                               private$.icon_color <- values$icon_color
                              }
                            )
 )

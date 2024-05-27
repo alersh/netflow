@@ -13,11 +13,12 @@ Node <- R6::R6Class("Node",
                       #' @description Create a node
                       #' @param id Character. The id name of this node
                       #' @param style A Node_Style object that specifies the appearance of the node
+                      #' @param type The node type.
                       #' @param author Character. The name of the author.
                       #' @param description The description of this node.
                       #' @param default Logical. If TRUE, then no data fields are initialized.
                       #' @return the Node object
-                      initialize = function(id, style = NULL,  author = "", description = "", default = FALSE){
+                      initialize = function(id, style = NULL, type = "regular",  author = "", description = "", default = FALSE){
 
                         if (!default){
                           if (missing(id))
@@ -25,7 +26,7 @@ Node <- R6::R6Class("Node",
                           private$.id <- id
                           self$set_ui_editable()
                           if (is.null(style)){
-                            style <- Node_Style$new(label = private$.id)
+                            style <- Node_Style$new(label = private$.id, type = type)
                           }
                           private$.style <- style
                           private$.description <- description

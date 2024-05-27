@@ -45,6 +45,7 @@ visualization}
 \item \href{#method-Process_Node-ui}{\code{Process_Node$ui()}}
 \item \href{#method-Process_Node-server}{\code{Process_Node$server()}}
 \item \href{#method-Process_Node-set_ui_editable}{\code{Process_Node$set_ui_editable()}}
+\item \href{#method-Process_Node-set_output_filename}{\code{Process_Node$set_output_filename()}}
 \item \href{#method-Process_Node-clone}{\code{Process_Node$clone()}}
 }
 }
@@ -224,10 +225,21 @@ can be set
 \item{\code{fun}}{Logical whether the function can be edited}
 
 \item{\code{description}}{Logical whether the description can be edited
-output}
+set_output_filename}
 }
 \if{html}{\out{</div>}}
 }
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Process_Node-set_output_filename"></a>}}
+\if{latex}{\out{\hypertarget{method-Process_Node-set_output_filename}{}}}
+\subsection{Method \code{set_output_filename()}}{
+Store the name of the output file
+output
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Process_Node$set_output_filename()}\if{html}{\out{</div>}}
+}
+
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-Process_Node-clone"></a>}}

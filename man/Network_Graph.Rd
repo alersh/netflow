@@ -30,6 +30,7 @@ initialize
 \item \href{#method-Network_Graph-new}{\code{Network_Graph$new()}}
 \item \href{#method-Network_Graph-get_node}{\code{Network_Graph$get_node()}}
 \item \href{#method-Network_Graph-set_node_color}{\code{Network_Graph$set_node_color()}}
+\item \href{#method-Network_Graph-set_node_type}{\code{Network_Graph$set_node_type()}}
 \item \href{#method-Network_Graph-set_node_shape}{\code{Network_Graph$set_node_shape()}}
 \item \href{#method-Network_Graph-set_node_border}{\code{Network_Graph$set_node_border()}}
 \item \href{#method-Network_Graph-set_node_label}{\code{Network_Graph$set_node_label()}}
@@ -103,6 +104,26 @@ Set the node's color
 \item{\code{node_id}}{Character the id of the node}
 
 \item{\code{color}}{Character the color of the node
+set_node_color}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Network_Graph-set_node_type"></a>}}
+\if{latex}{\out{\hypertarget{method-Network_Graph-set_node_type}{}}}
+\subsection{Method \code{set_node_type()}}{
+Set the node's shape
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Network_Graph$set_node_type(node_id, type)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{node_id}}{Character the id of the node}
+
+\item{\code{type}}{Character the type of the node
 set_node_color}
 }
 \if{html}{\out{</div>}}

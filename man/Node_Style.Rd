@@ -24,7 +24,7 @@ Specifies the appearance of the nodes
 \describe{
 \item{\code{shape}}{Get the shape of this node.}
 
-\item{\code{type}}{Get or set the type of the node. Default 'regular'.}
+\item{\code{type}}{Get or set the type of the node. Default 'base'.}
 
 \item{\code{lock}}{Set the shape of the node based on the lock status.}
 
@@ -58,13 +58,19 @@ Specifies the appearance of the nodes
 \subsection{Method \code{new()}}{
 Create a new Node_Style object with a node label
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Node_Style$new(label = "", default = FALSE)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{Node_Style$new(
+  label = "",
+  type = c("base", "process", "database"),
+  default = FALSE
+)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
 \item{\code{label}}{the label of the node to be displayed}
+
+\item{\code{type}}{the type of the node. Default is "base". It can also be "process" and "database".}
 
 \item{\code{default}}{Logical. If TRUE, then no data fields are initialized.}
 }

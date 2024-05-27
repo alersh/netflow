@@ -17,9 +17,12 @@ Network_Graph <- R6::R6Class("Network_Graph",
 
                                  private$.node_table <- data.frame(id = NULL,
                                                                    label = NULL,
+                                                                   type = NULL,
                                                                    color.background = NULL,
                                                                    color.border = NULL,
                                                                    shape = NULL,
+                                                                   icon = NULL,
+                                                                   icon.color = NULL,
                                                                    group = NULL,
                                                                    title = NULL
                                                                    )
@@ -48,7 +51,21 @@ Network_Graph <- R6::R6Class("Network_Graph",
                                  if (!is.character(color))
                                    stop("The input 'color' must be a character.")
                                  private$.node_table$color.background[which(private$.node_table$id == node_id)] <- color
+                                 private$.node_table$icon.color[which(private$.node_table$id == node_id)] <- color
                                  invisible(self)
+                               },
+                               #' set_node_color
+                               #' @description Set the node's shape
+                               #' @param node_id Character the id of the node
+                               #' @param type Character the type of the node
+                               set_node_type = function(node_id, type){
+                                 if (!node_id %in% private$.node_table$id){
+                                   stop("No such node id exists in the network structure.")
+                                 }
+                                 if (!is.character(type))
+                                   stop("The input 'type' must be a character.")
+                                 private$.node_table$type[which(private$.node_table$id == node_id)] <- type
+
                                },
                                #' set_node_color
                                #' @description Set the node's shape

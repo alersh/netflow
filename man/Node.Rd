@@ -73,7 +73,14 @@ A node contains an ID, the name of the author, the description, and the display 
 \subsection{Method \code{new()}}{
 Create a node
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Node$new(id, style = NULL, author = "", description = "", default = FALSE)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{Node$new(
+  id,
+  style = NULL,
+  type = "base",
+  author = "",
+  description = "",
+  default = FALSE
+)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -82,6 +89,8 @@ Create a node
 \item{\code{id}}{Character. The id name of this node}
 
 \item{\code{style}}{A Node_Style object that specifies the appearance of the node}
+
+\item{\code{type}}{The node type.}
 
 \item{\code{author}}{Character. The name of the author.}
 

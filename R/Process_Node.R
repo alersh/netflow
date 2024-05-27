@@ -20,7 +20,7 @@ Process_Node <- R6::R6Class("Process_Node",
                               initialize = function(id = "", fn = NULL, style = NULL, visualization = NULL, author = "", description = "", default = FALSE){
 
                                 if (!default){
-                                  super$initialize(id, style,  author, description)
+                                  super$initialize(id, style, "process", author, description)
                                   private$.fn <- fn  # function of this node, including the arguments and options of this function
                                   private$.input_ids <- Set$new()
                                   private$.to_node <- Set$new()

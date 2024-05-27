@@ -20,7 +20,7 @@ Network <- R6::R6Class("Network",
                          #' @return A Network object
                          initialize = function(id = "", style = NULL, author = "", description = "", rankdir = 'LR', default = FALSE){
                            if (!default){
-                             super$initialize(id, style, author, description)
+                             super$initialize(id, style, author = author, description = description)
                              private$.structure = Network_Structure$new(rankdir)
                              private$.nodes <- Dictionary$new()
                            }
@@ -217,7 +217,7 @@ Network <- R6::R6Class("Network",
                          #' will not be locked, whereas nodes that are invalid will be locked. Locking
                          #' will also be performed as a side effect.
                          set_node_validity = function(){
-                           for (i in 1:length(private$.nodes$keys)){
+                           for (i in seq(private$.nodes$keys)){
                              private$.nodes$get(i)$set_validity()
                            }
                            invisible(self)
