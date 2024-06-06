@@ -207,7 +207,7 @@ Netflow <- R6::R6Class("Netflow",
                          #' @param output the Shiny output
                          #' @param session the Shiny session
                          server = function(input, output, session){
-                           shinyFlowServer(input, output, session, self)
+                           shinyFlowServer(self$id, self)
                          },
                          #' call
                          #' @description call the module
