@@ -1,11 +1,10 @@
 
-## Synapse/ModelPath: Visualize, Explore, and Model Your Data Processing Pipeline Interactively
+## Netflow: Visualize, Explore, and Model Your Data Processing Pipeline Interactively
 
-Synapse/ModelPath is a R package that allows you to create a user
-interface of the data analytic pipeline. Your data analytic pipeline
-becomes transparent and interpretable to other users especially those
-who have no or little knowledge in R programming. It is currently under
-development.
+Netflow is a R package that allows you to create a user interface of the
+data analytic pipeline. Your data analytic pipeline becomes transparent
+and interpretable to other users especially those who have no or little
+knowledge in R programming. It is currently under development.
 
 To illustrate the utility of this package, we start with a simple toy
 problem. Suppose we want to build a pipeline that reads in the Iris
